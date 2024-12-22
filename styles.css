@@ -1,6 +1,5 @@
-/* Genel stil */
 html {
-    scroll-behavior: smooth; /* Yumuşak kaydırma efekti */
+    scroll-behavior: smooth; 
 }
 
 * {
@@ -11,8 +10,8 @@ html {
 }
 
 body {
-    background-color: #1e1e1e; /* VS Code Koyu Arka Plan */
-    color: #dcdcdc; /* Yazı Rengi */
+    background-color: #1e1e1e; 
+    color: #dcdcdc; 
     line-height: 1.6;
     display: flex;
     flex-direction: row;
@@ -20,19 +19,18 @@ body {
     flex-wrap: wrap;
 }
 
-/* Header / Navbar */
 header {
     width: 280px;
-    background-color: #1e1e1e; /* Dark background */
+    background-color: #1e1e1e; 
     padding: 20px;
     text-align: left;
     position: fixed;
     height: 100%;
     top: 0;
     font-size: 16px;
-    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.5); /* Menüyü daha şık göstermek için */
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.5); 
     transition: all 0.3s ease;
-    overflow-y: auto; /* İçeriğin taşmasını engelle */
+    overflow-y: auto; 
 }
 
 header nav ul {
@@ -47,7 +45,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #dcdcdc; /* Link Rengi */
+    color: #dcdcdc; 
     text-decoration: none;
     font-size: 18px;
     display: flex;
@@ -57,21 +55,19 @@ header nav ul li a {
     text-transform: uppercase;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid transparent; /* Hoverda border efekti */
+    border: 1px solid transparent; 
 }
 
 header nav ul li a:hover {
-    background-color: #444; /* Hover Arka Plan */
-    color: #61afef; /* Hover Rengi (Mavi tonları) */
-    border-color: #61afef; /* Border hover efekti */
+    background-color: #444; 
+    color: #61afef; 
+    border-color: #61afef;
 }
 
-/* Icon links in navbar */
 header nav ul li a i {
     font-size: 24px;
 }
 
-/* Social icons container */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -94,12 +90,10 @@ header nav ul li a i {
     color: #fff;
 }
 
-/* Menu toggle for small screens */
 .menu-toggle {
     display: none;
 }
 
-/* Ekran boyutuna göre navbarı responsive hale getirme */
 @media (max-width: 768px) {
     header {
         width: 100%;
@@ -141,7 +135,6 @@ header nav ul li a i {
     }
 }
 
-/* Main content */
 main {
     margin-left: 280px;
     padding: 30px;
@@ -194,76 +187,76 @@ p {
 }
 @media (max-width: 600px) {
     .skills span {
-        padding: 1px 3px; /* Daha küçük bir boyut belirle */
-        font-size: 14px; /* Yazı boyutunu küçült */
+        padding: 1px 3px;
+        font-size: 14px; 
     }
 }
 
 .skills span.python {
-    background-color: #f51010; /* Python rengi */
+    background-color: #f51010; 
 }
 .skills span.r {
-    background-color: #55b7f4; /* TensorFlow rengi */
+    background-color: #55b7f4; 
 }
 
 .skills span.js {
-    background-color: #f39c12; /* JavaScript rengi */
+    background-color: #f39c12;
 }
 
 .skills span.swift {
-    background-color: #d04e09; /* D3.js rengi */
+    background-color: #d04e09; 
 }
 
 .skills span.datascience {
-    background-color: #3a0bc7; /* TensorFlow rengi */
+    background-color: #3a0bc7; 
 }
 .skills span.elasticsearch {
-    background-color: #5397e9; /* TensorFlow rengi */
+    background-color: #5397e9; 
 }
 .skills span.dotnet {
-    background-color: #906bff; /* TensorFlow rengi */
+    background-color: #906bff; 
 }
 .skills span.unrealengine {
-    background-color: #000000; /* TensorFlow rengi */
+    background-color: #000000; 
 }
 .skills span.firebase {
-    background-color: #e74c3c; /* TensorFlow rengi */
+    background-color: #e74c3c; 
 }
 .skills span.openai {
-    background-color: #8c3491; /* TensorFlow rengi */
+    background-color: #8c3491; 
 }
 .skills span.vr {
-    background-color: #790606; /* TensorFlow rengi */
+    background-color: #790606; 
 }
 .skills span.unity {
-    background-color: #060a46; /* TensorFlow rengi */
+    background-color: #060a46; 
 }
 .skills span.ai {
-    background-color: #254501; /* TensorFlow rengi */
+    background-color: #254501; 
 }
 .skills span.ml {
-    background-color: #03414f; /* TensorFlow rengi */
+    background-color: #03414f; 
 }
 .skills span.numpy {
-    background-color: #898b01; /* TensorFlow rengi */
+    background-color: #898b01;
 }
 .skills span.pandas {
-    background-color: #a57504; /* TensorFlow rengi */
+    background-color: #a57504;
 }
 .skills span.crawling {
-    background-color: #e54d4d; /* TensorFlow rengi */
+    background-color: #e54d4d; 
 }
 .skills span.network {
-    background-color: #17c1df; /* TensorFlow rengi */
+    background-color: #17c1df; 
 }
 .skills span.csharp {
-    background-color: #8312b4; /* TensorFlow rengi */
+    background-color: #8312b4;
 }
 .skills span.mysql {
-    background-color: #331bab; /* TensorFlow rengi */
+    background-color: #331bab; 
 }
 .skills span.angular {
-    background-color: #ff0000; /* TensorFlow rengi */
+    background-color: #ff0000; 
 }
 .date {
     margin-top: 10px;
@@ -271,7 +264,6 @@ p {
     color: #888;
 }
 
-/* Skills ve Hobbies bölümleri için stil */
 #skills, #hobbies {
     margin-bottom: 50px;
 }
@@ -287,15 +279,14 @@ p {
 }
 
 #skills ul li strong, #hobbies ul li strong {
-    color: #61afef; /* Vurgulu başlıklar için */
+    color: #61afef;
 }
 
-/* Languages Bölümü */
 #languages {
     padding: 30px;
-    max-width: 500px; /* Kutunun genişliği */
-    text-align: right; /* Metni sola hizala */
-    background-color: #2d2d2d; /* Koyu arka plan */
+    max-width: 500px; 
+    text-align: right; 
+    background-color: #2d2d2d; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -306,23 +297,20 @@ p {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
 
-/* Başlık */
 #languages h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #61afef; /* Başlık rengi */
+    color: #61afef; 
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* İkon */
 #languages h2 i {
     font-size: 1.8rem;
     color: #61afef;
 }
 
-/* Açıklama Metni */
 #languages p {
     font-size: 1rem;
     margin-bottom: 20px;
@@ -330,7 +318,6 @@ p {
     color: #dcdcdc;
 }
 
-/* Liste */
 #languages ul {
     list-style: none;
     padding: 0;
@@ -340,7 +327,7 @@ p {
     font-size: 1rem;
     margin: 10px 0;
     text-align: left;
-    background: #3c3c3c; /* Liste arka planı */
+    background: #3c3c3c; 
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -354,13 +341,13 @@ p {
 }
 
 #languages ul li strong {
-    color: #61afef; /* Vurgulu metin */
+    color: #61afef; 
 }
 
 @media (max-width: 768px) {
     #languages {
-        margin: 30px auto; /* Responsive modda kutuyu ortala */
-        max-width: calc(100% - 40px); /* Ekran genişliğine uyum sağla */
+        margin: 30px auto; 
+        max-width: calc(100% - 40px); 
     }
 
     #languages h2 {
@@ -375,29 +362,25 @@ p {
         font-size: 0.9rem;
     }
 
-    /* Ana içeriği responsive hale getirme */
     main {
         margin-left: 0;
         width: 100%;
     }
 
-    /* Profil fotoğrafı responsive hale getirme */
     .profile-picture img {
         width: 120px;
         height: 120px;
     }
 
     .experiment-container, .project-container, .education-container {
-        grid-template-columns: 1fr; /* Tek sütun haline getir */
+        grid-template-columns: 1fr; 
     }
 
-    /* Body'yi dikey hale getirme */
     body {
         flex-direction: column;
     }
 }
 
-/* Profil bölümü */
 #overview {
     display: flex;
     flex-direction: column;
