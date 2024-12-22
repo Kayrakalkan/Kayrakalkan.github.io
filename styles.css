@@ -192,6 +192,12 @@ p {
     border-radius: 20px;
     margin-right: 10px;
 }
+@media (max-width: 600px) {
+    .skills span {
+        padding: 2px 5px; /* Daha küçük bir boyut belirle */
+        font-size: 14px; /* Yazı boyutunu küçült */
+    }
+}
 
 .skills span.python {
     background-color: #f51010; /* Python rengi */
