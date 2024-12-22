@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 /* Header / Navbar */
@@ -134,6 +135,10 @@ header nav ul li a i {
         font-size: 22px;
         padding: 15px;
     }
+
+    body {
+        flex-direction: column;
+    }
 }
 
 /* Main content */
@@ -215,15 +220,51 @@ p {
 .skills span.unrealengine {
     background-color: #000000; /* TensorFlow rengi */
 }
-.skills span.tensorflow {
+.skills span.firebase {
     background-color: #e74c3c; /* TensorFlow rengi */
 }
-
+.skills span.openai {
+    background-color: #8c3491; /* TensorFlow rengi */
+}
+.skills span.vr {
+    background-color: #790606; /* TensorFlow rengi */
+}
+.skills span.unity {
+    background-color: #060a46; /* TensorFlow rengi */
+}
+.skills span.ai {
+    background-color: #254501; /* TensorFlow rengi */
+}
+.skills span.ml {
+    background-color: #03414f; /* TensorFlow rengi */
+}
+.skills span.numpy {
+    background-color: #898b01; /* TensorFlow rengi */
+}
+.skills span.pandas {
+    background-color: #a57504; /* TensorFlow rengi */
+}
+.skills span.crawling {
+    background-color: #e54d4d; /* TensorFlow rengi */
+}
+.skills span.network {
+    background-color: #17c1df; /* TensorFlow rengi */
+}
+.skills span.csharp {
+    background-color: #8312b4; /* TensorFlow rengi */
+}
+.skills span.mysql {
+    background-color: #331bab; /* TensorFlow rengi */
+}
+.skills span.angular {
+    background-color: #ff0000; /* TensorFlow rengi */
+}
 .date {
     margin-top: 10px;
     font-size: 0.9em;
     color: #888;
 }
+
 /* Skills ve Hobbies bölümleri için stil */
 #skills, #hobbies {
     margin-bottom: 50px;
@@ -242,6 +283,7 @@ p {
 #skills ul li strong, #hobbies ul li strong {
     color: #61afef; /* Vurgulu başlıklar için */
 }
+
 /* Languages Bölümü */
 #languages {
     padding: 30px;
@@ -305,12 +347,10 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Vurgulu Metin */
 #languages ul li strong {
     color: #61afef; /* Vurgulu metin */
 }
 
-/* Responsive Tasarım */
 @media (max-width: 768px) {
     #languages {
         margin: 30px auto; /* Responsive modda kutuyu ortala */
@@ -328,12 +368,34 @@ p {
     #languages ul li {
         font-size: 0.9rem;
     }
+
+    /* Ana içeriği responsive hale getirme */
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Profil fotoğrafı responsive hale getirme */
+    .profile-picture img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .experiment-container, .project-container, .education-container {
+        grid-template-columns: 1fr; /* Tek sütun haline getir */
+    }
+
+    /* Body'yi dikey hale getirme */
+    body {
+        flex-direction: column;
+    }
 }
 
+/* Profil bölümü */
 #overview {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     padding: 30px;
 }
 
@@ -342,26 +404,14 @@ p {
 }
 
 .profile-picture {
-    margin-top: 20px; 
-    margin-bottom: 20px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .profile-picture img {
-    width: 150px; /* Görselin genişliği */
-    height: 150px; /* Görselin yüksekliği */
-    border-radius: 15px; /* Köşe yuvarlatma */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
-    object-fit: cover; /* Görseli çerçeveye sığdır */
-}
-
-/* Responsive Tasarım */
-@media (max-width: 768px) {
-    #overview .content {
-        padding: 10px; /* Mobilde daha az padding */
-    }
-
-    .profile-picture img {
-        width: 120px; /* Görsel boyutunu mobilde küçült */
-        height: 120px;
-    }
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
 }
