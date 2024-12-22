@@ -194,7 +194,7 @@ p {
 }
 @media (max-width: 600px) {
     .skills span {
-        padding: 2px 5px; /* Daha küçük bir boyut belirle */
+        padding: 1px 3px; /* Daha küçük bir boyut belirle */
         font-size: 14px; /* Yazı boyutunu küçült */
     }
 }
