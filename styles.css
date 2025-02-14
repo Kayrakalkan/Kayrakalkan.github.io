@@ -404,3 +404,22 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     object-fit: cover;
 }
+.resume-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: #0056b3;
+}
