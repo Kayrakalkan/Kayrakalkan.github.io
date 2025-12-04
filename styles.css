@@ -1920,7 +1920,8 @@ p {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
     
-    .skills-grid {
+    .skills-grid,
+    .skills-simple-grid {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
     
@@ -1932,15 +1933,18 @@ p {
 }
 
 @media (max-width: 768px) {
+    /* Menu bar responsive */
     .macos-menubar-top {
-        height: 40px; /* Slightly smaller on mobile */
+        height: 40px;
         padding: 0 12px;
+        font-size: 12px;
     }
     
     .macos-window {
         border-radius: 0;
         box-shadow: none;
-        margin-top: 40px; /* Match smaller menu bar */
+        margin-top: 40px;
+        width: 100%;
     }
     
     .apple-logo {
@@ -1953,7 +1957,7 @@ p {
     }
     
     .titlebar {
-        height: 50px; /* Slightly smaller */
+        height: 50px;
     }
     
     .window-title {
@@ -1961,7 +1965,7 @@ p {
     }
     
     .menubar-center {
-        display: none; /* Hide profile on mobile */
+        display: none;
     }
     
     .menubar-datetime {
@@ -1981,23 +1985,15 @@ p {
     
     .control-center-dropdown {
         right: 8px;
-        top: 44px; /* Below smaller menu bar */
+        top: 44px;
         width: 280px;
     }
     
-    /* Volunteering Responsive */
-    .volunteering-container {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Skills Simple Responsive */
-    .skills-simple-grid {
-        grid-template-columns: 1fr;
-    }
-    
+    /* Layout responsive */
     .window-content {
         flex-direction: column;
-        height: calc(100vh - 90px);
+        height: auto;
+        min-height: calc(100vh - 90px);
         max-height: none;
     }
     
@@ -2016,6 +2012,11 @@ p {
         gap: 8px;
     }
     
+    .sidebar nav ul li a {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
     .sidebar-divider {
         display: none;
     }
@@ -2027,6 +2028,11 @@ p {
     
     .main-content {
         padding: 20px 16px;
+        width: 100%;
+    }
+    
+    .content-section {
+        margin-bottom: 30px;
     }
     
     .content-section.full-width {
@@ -2034,18 +2040,34 @@ p {
         margin-right: -16px;
     }
     
-    .skills-grid {
+    /* Grid responsive */
+    .skills-grid,
+    .skills-simple-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .volunteering-container {
         grid-template-columns: 1fr;
     }
     
     .hobbies-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
     
     .contact-grid {
         grid-template-columns: 1fr;
     }
     
+    .education-container,
+    .experiment-container,
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    /* Typography responsive */
     h1 {
         font-size: 28px;
     }
@@ -2054,19 +2076,86 @@ p {
         font-size: 22px;
     }
     
+    h3 {
+        font-size: 18px;
+    }
+    
+    h4 {
+        font-size: 15px;
+    }
+    
+    p, li {
+        font-size: 14px;
+    }
+    
     .section-card {
         padding: 24px 20px;
     }
     
+    .section-description {
+        font-size: 14px;
+    }
+    
+    /* Skill tags responsive */
+    .skill-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .skills {
+        gap: 6px;
+    }
+    
+    /* Modal responsive */
     .modal-content {
         width: 95%;
         margin: 20px;
+        padding: 20px;
+    }
+    
+    /* Profile section responsive */
+    .profile-section {
+        padding: 16px;
+    }
+    
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-info h2 {
+        font-size: 18px;
     }
 }
 
 @media (max-width: 480px) {
+    /* Menu bar even smaller */
+    .macos-menubar-top {
+        height: 36px;
+        padding: 0 8px;
+    }
+    
+    .macos-window {
+        margin-top: 36px;
+    }
+    
+    .control-center-dropdown {
+        top: 40px;
+        width: 260px;
+    }
+    
+    /* Sidebar fully stacked */
     .sidebar nav ul {
         grid-template-columns: 1fr;
+    }
+    
+    .sidebar nav ul li a {
+        padding: 12px;
+    }
+    
+    /* Traffic lights smaller */
+    .traffic-lights {
+        gap: 4px;
     }
     
     .traffic-lights span {
@@ -2075,23 +2164,67 @@ p {
     }
     
     .window-title {
-        font-size: 12px;
+        font-size: 11px;
     }
     
+    /* Main content padding */
+    .main-content {
+        padding: 16px 12px;
+    }
+    
+    .section-card {
+        padding: 20px 16px;
+    }
+    
+    /* Typography extra small */
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    /* Skill tags smaller */
     .skill-tag {
         font-size: 11px;
         padding: 5px 10px;
     }
     
+    /* Hobbies single column */
     .hobbies-grid {
         grid-template-columns: 1fr;
     }
     
+    /* Volunteering header */
     .volunteering-header h2 {
         font-size: 18px;
     }
     
     .volunteering-header i {
         font-size: 20px;
+    }
+    
+    /* Cards more compact */
+    .card {
+        padding: 16px;
+    }
+    
+    /* Profile even smaller */
+    .profile-photo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .profile-info h2 {
+        font-size: 16px;
+    }
+    
+    .profile-info p {
+        font-size: 12px;
     }
 }
