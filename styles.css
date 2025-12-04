@@ -335,28 +335,10 @@ body {
     letter-spacing: 0.2px;
 }
 
-/* Mobile Menu Toggle Button */
+/* Mobile Menu Toggle Button - Hidden, not used */
 .mobile-menu-toggle {
-    display: none;
-    position: absolute;
-    left: 60px;
-    background: transparent;
-    border: none;
-    font-size: 18px;
-    color: var(--macos-text-primary);
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 6px;
-    transition: background 0.2s ease;
-    z-index: 10;
-}
-
-.mobile-menu-toggle:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-.mobile-menu-toggle:active {
-    background: rgba(0, 0, 0, 0.1);
+    display: none !important;
+    visibility: hidden;
 }
 
 /* Profile in Title Bar */
@@ -2028,11 +2010,6 @@ p {
         width: 260px;
     }
     
-    /* Show mobile menu toggle */
-    .mobile-menu-toggle {
-        display: block;
-    }
-    
     /* Layout responsive */
     .window-content {
         flex-direction: column;
@@ -2043,74 +2020,9 @@ p {
         overflow-x: hidden;
     }
     
-    /* Completely hide sidebar by default on mobile - starts off-screen */
+    /* Hide sidebar completely on mobile - no toggle button */
     .sidebar {
-        position: fixed;
-        left: -100%;
-        top: 88px;
-        width: 75%;
-        max-width: 280px;
-        height: calc(100vh - 88px);
-        background: var(--macos-window-bg);
-        border-right: 1px solid var(--macos-border);
-        padding: 20px 16px;
-        overflow-y: auto;
-        transition: left 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-        z-index: 1000;
-        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
-        visibility: hidden;
-    }
-    
-    /* Show sidebar when hamburger is clicked */
-    .sidebar.active {
-        left: 0;
-        visibility: visible;
-    }
-    
-    /* Dark overlay when sidebar is open */
-    .sidebar::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        z-index: -1;
-    }
-    
-    .sidebar.active::before {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
-    
-    .sidebar nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-    }
-    
-    .sidebar nav ul li {
-        width: 100%;
-    }
-    
-    .sidebar nav ul li a {
-        padding: 14px 16px;
-        font-size: 14px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-    
-    .sidebar nav ul li a i {
-        font-size: 16px;
-        min-width: 20px;
+        display: none !important;
     }
     
     .sidebar-divider {
@@ -2263,31 +2175,6 @@ p {
         top: 38px;
         width: 240px;
         right: 2px;
-    }
-    
-    /* Mobile menu toggle button */
-    .mobile-menu-toggle {
-        left: 45px;
-        font-size: 15px;
-        padding: 6px;
-    }
-    
-    /* Sidebar stays hidden until hamburger is clicked - smaller width on tiny screens */
-    .sidebar {
-        width: 85%;
-        max-width: 260px;
-        top: 80px;
-        height: calc(100vh - 80px);
-        padding: 16px 12px;
-    }
-    
-    .sidebar nav ul li a {
-        padding: 12px 14px;
-        font-size: 13px;
-    }
-    
-    .sidebar nav ul li a i {
-        font-size: 14px;
     }
     
     /* Traffic lights smaller */
