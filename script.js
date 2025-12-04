@@ -5,6 +5,37 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ============================================
+    // Mobile Menu Toggle
+    // ============================================
+    
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (mobileMenuToggle && sidebar) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            sidebar.classList.toggle('active');
+        });
+        
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(e) {
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(e.target) && 
+                e.target !== mobileMenuToggle) {
+                sidebar.classList.remove('active');
+            }
+        });
+        
+        // Close sidebar when clicking a link
+        const sidebarLinks = sidebar.querySelectorAll('a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebar.classList.remove('active');
+            });
+        });
+    }
+    
+    // ============================================
     // Menu Bar Date/Time
     // ============================================
     
