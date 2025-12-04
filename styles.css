@@ -2043,7 +2043,7 @@ p {
         overflow-x: hidden;
     }
     
-    /* Hide sidebar by default on mobile */
+    /* Completely hide sidebar by default on mobile - starts off-screen */
     .sidebar {
         position: fixed;
         left: -100%;
@@ -2055,17 +2055,19 @@ p {
         border-right: 1px solid var(--macos-border);
         padding: 20px 16px;
         overflow-y: auto;
-        transition: left 0.3s ease;
+        transition: left 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
         z-index: 1000;
         box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+        visibility: hidden;
     }
     
-    /* Show sidebar when active */
+    /* Show sidebar when hamburger is clicked */
     .sidebar.active {
         left: 0;
+        visibility: visible;
     }
     
-    /* Overlay when sidebar is open */
+    /* Dark overlay when sidebar is open */
     .sidebar::before {
         content: '';
         position: fixed;
@@ -2075,13 +2077,15 @@ p {
         height: 100vh;
         background: rgba(0, 0, 0, 0.5);
         opacity: 0;
+        visibility: hidden;
         pointer-events: none;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
         z-index: -1;
     }
     
     .sidebar.active::before {
         opacity: 1;
+        visibility: visible;
         pointer-events: auto;
     }
     
@@ -2118,10 +2122,13 @@ p {
         display: none;
     }
     
+    /* Main content takes full width since sidebar is hidden */
     .main-content {
         padding: 16px;
         width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
+        margin: 0;
     }
     
     .content-section {
@@ -2265,9 +2272,9 @@ p {
         padding: 6px;
     }
     
-    /* Sidebar positioning for small screens */
+    /* Sidebar stays hidden until hamburger is clicked - smaller width on tiny screens */
     .sidebar {
-        width: 80%;
+        width: 85%;
         max-width: 260px;
         top: 80px;
         height: calc(100vh - 80px);
