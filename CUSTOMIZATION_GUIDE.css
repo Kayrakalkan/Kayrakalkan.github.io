@@ -1,0 +1,294 @@
+/* ============================================
+   QUICK CUSTOMIZATION GUIDE
+   ============================================
+   
+   This file contains easy-to-modify variables
+   for customizing your macOS portfolio design.
+   ============================================ */
+
+/* ============================================
+   COLOR PALETTE
+   Change these to customize your color scheme
+   ============================================ */
+
+:root {
+    /* PRIMARY COLORS - Edit these to change the overall look */
+    --macos-bg: #f5f5f7;              /* Page background (light grey) */
+    --macos-window-bg: #ffffff;        /* Window background (white) */
+    --macos-sidebar-bg: #f9f9f9;       /* Sidebar background (off-white) */
+    --macos-card-bg: #ffffff;          /* Card background (white) */
+    
+    /* ACCENT COLOR - Your main brand color */
+    --macos-accent: #007aff;           /* Primary blue (default macOS) */
+    --macos-accent-hover: #0051d5;     /* Darker blue for hover states */
+    
+    /* TEXT COLORS */
+    --macos-text-primary: #1d1d1f;     /* Main text (dark grey) */
+    --macos-text-secondary: #6e6e73;   /* Secondary text (medium grey) */
+    
+    /* BORDERS & DIVIDERS */
+    --macos-border: #e5e5e5;           /* Border color (light grey) */
+    
+    /* SHADOWS */
+    --macos-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --macos-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --macos-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================================
+   ALTERNATIVE COLOR SCHEMES
+   Copy one of these into :root above to try different themes
+   ============================================ */
+
+/* DARK MODE (Professional Dark Theme)
+:root {
+    --macos-bg: #1c1c1e;
+    --macos-window-bg: #2c2c2e;
+    --macos-sidebar-bg: #252525;
+    --macos-card-bg: #2c2c2e;
+    --macos-accent: #0a84ff;
+    --macos-accent-hover: #409cff;
+    --macos-text-primary: #f5f5f7;
+    --macos-text-secondary: #aeaeb2;
+    --macos-border: #38383a;
+}
+*/
+
+/* GREEN ACCENT (Nature/Growth Theme)
+:root {
+    --macos-accent: #32d74b;
+    --macos-accent-hover: #28c940;
+}
+*/
+
+/* PURPLE ACCENT (Creative Theme)
+:root {
+    --macos-accent: #af52de;
+    --macos-accent-hover: #9b41cc;
+}
+*/
+
+/* ORANGE ACCENT (Energy Theme)
+:root {
+    --macos-accent: #ff9500;
+    --macos-accent-hover: #e68600;
+}
+*/
+
+/* RED ACCENT (Bold Theme)
+:root {
+    --macos-accent: #ff3b30;
+    --macos-accent-hover: #e63329;
+}
+*/
+
+
+/* ============================================
+   DIMENSIONS
+   Adjust sizes and spacing
+   ============================================ */
+
+/* Window Size */
+.macos-window {
+    max-width: 1400px;  /* Maximum window width - increase for wider layout */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;  /* Sidebar width - increase for more space */
+}
+
+/* Title Bar */
+.titlebar {
+    height: 52px;  /* Title bar height */
+}
+
+/* Traffic Light Buttons */
+.traffic-lights span {
+    width: 12px;   /* Button size */
+    height: 12px;
+}
+
+/* Content Padding */
+.main-content {
+    padding: 32px 40px;  /* Main content padding */
+}
+
+.section-card {
+    padding: 32px;  /* Card internal padding */
+}
+
+
+/* ============================================
+   TYPOGRAPHY
+   Adjust font sizes
+   ============================================ */
+
+/* Headings */
+h1 { font-size: 32px; }  /* Main title */
+h2 { font-size: 24px; }  /* Section titles */
+h3 { font-size: 18px; }  /* Card titles */
+h4 { font-size: 15px; }  /* Subsection titles */
+
+/* Body Text */
+p { font-size: 15px; }   /* Paragraph text */
+
+/* Navigation */
+.sidebar nav ul li a { font-size: 13px; }  /* Sidebar links */
+
+
+/* ============================================
+   BORDER RADIUS
+   Adjust roundness of elements
+   ============================================ */
+
+.macos-window { border-radius: 12px; }     /* Window corners */
+.section-card { border-radius: 10px; }     /* Card corners */
+.card { border-radius: 8px; }              /* Small card corners */
+.sidebar nav ul li a { border-radius: 6px; } /* Navigation items */
+.skill-tag { border-radius: 6px; }         /* Skill tags */
+
+
+/* ============================================
+   GRID LAYOUTS
+   Adjust how many columns in card grids
+   ============================================ */
+
+/* Default: 2 columns on desktop, adapts based on min-width */
+.education-container,
+.experiment-container,
+.project-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Change 320px to adjust minimum card width before wrapping */
+    
+    /* For 3 columns on large screens, use:
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    */
+    
+    /* For always 2 columns, use:
+    grid-template-columns: repeat(2, 1fr);
+    */
+}
+
+
+/* ============================================
+   ANIMATION SPEED
+   Adjust transition timing
+   ============================================ */
+
+/* Global transition speed */
+.sidebar nav ul li a,
+.card,
+.resume-button,
+.social-icons a {
+    transition-duration: 0.15s;  /* Change to 0.1s for faster, 0.3s for slower */
+}
+
+
+/* ============================================
+   SKILL TAG COLORS
+   Customize individual skill tag colors
+   ============================================ */
+
+.skill-tag.python { background: #007aff; }
+.skill-tag.javascript { background: #ffcc00; color: #1d1d1f; }
+.skill-tag.swift { background: #ff9500; }
+.skill-tag.react { background: #61dafb; color: #1d1d1f; }
+.skill-tag.node { background: #68a063; }
+.skill-tag.ai { background: #32d74b; }
+.skill-tag.ml { background: #64d2ff; }
+.skill-tag.datascience { background: #5856d6; }
+
+/* Add your own:
+.skill-tag.yourtechnology { background: #yourcolor; }
+*/
+
+
+/* ============================================
+   TRAFFIC LIGHT COLORS
+   macOS standard - don't change unless needed
+   ============================================ */
+
+.traffic-lights .close { background: #ff5f57; }
+.traffic-lights .minimize { background: #ffbd2e; }
+.traffic-lights .maximize { background: #28ca42; }
+
+
+/* ============================================
+   MOBILE BREAKPOINTS
+   Adjust responsive behavior
+   ============================================ */
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+    /* Styles apply when screen is 1024px or smaller */
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+    /* Styles apply when screen is 768px or smaller */
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+    /* Styles apply when screen is 480px or smaller */
+}
+
+
+/* ============================================
+   PROFILE PICTURE
+   Adjust your photo display
+   ============================================ */
+
+.profile-picture img {
+    width: 140px;   /* Photo size */
+    height: 140px;
+    border-radius: 50%;  /* Change to 8px for rounded square */
+    border: 3px solid white;  /* Border around photo */
+}
+
+
+/* ============================================
+   HOVER EFFECTS
+   Customize interactive states
+   ============================================ */
+
+/* Card hover lift amount */
+.card:hover {
+    transform: translateY(-2px);  /* Change to -4px for more lift */
+}
+
+/* Sidebar item hover background */
+.sidebar nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.04);  /* Increase opacity for darker hover */
+}
+
+
+/* ============================================
+   CUSTOM ADDITIONS
+   Add your own CSS below
+   ============================================ */
+
+/* Example: Add a gradient background to the page
+body {
+    background: linear-gradient(135deg, #f5f5f7 0%, #e5e5ea 100%);
+}
+*/
+
+/* Example: Add animation to cards when scrolling into view
+.card {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/

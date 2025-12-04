@@ -11,233 +11,642 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul id="nav-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experiments">Experiments</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#languages">Languages</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-            </ul> 
-            <div class="resume-container">
-                <a href="cv.pdf" target="_blank" class="resume-button">Resume</a>
-            </div>                          
-            <div class="social-icons">
-                <a href="https://github.com/Kayrakalkan" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kayra-kalkan/?trk=opento_sprofile_goalscard" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:kalkankayra@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+905456461027"><i class="fas fa-phone-alt"></i></a>
+    <!-- macOS Menu Bar (Separate from Window) -->
+    <div class="macos-menubar-top">
+        <div class="menubar-left">
+            <div class="apple-logo">
+                <i class="fab fa-apple"></i>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="overview">
-            <div class="content">
-                <h1>Welcome to My Portfolio</h1>
-                <div class="profile-picture">
-                    <img src="photo.jpg" alt="Kayra Kalkan's Photo">
+        </div>
+        <div class="menubar-right">
+            <div class="menu-icons">
+                <div class="menu-icon" title="WiFi">
+                    <i class="fas fa-wifi"></i>
                 </div>
-                <p>Hi, I'm a third-year student at Marmara University, studying in the Statistics Department. I have a passion for software development, AI, and data science, and I enjoy exploring new technologies and building innovative projects. My journey began during high school, and it has been an exciting ride ever since. I’ve had hands-on experience in various fields, from game development to machine learning, and I am eager to continue growing professionally.</p>
+                <div class="menu-icon" title="Bluetooth">
+                    <i class="fab fa-bluetooth-b"></i>
+                </div>
+                <div class="menu-icon" title="Battery">
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
+                <div class="menu-icon control-center-trigger" title="Control Center">
+                    <i class="fas fa-toggle-on"></i>
+                </div>
             </div>
-        </section>
+            <div class="menubar-datetime" id="menubarDateTime">
+                <span class="datetime-text">Wed Dec 4  3:45 PM</span>
+            </div>
+        </div>
+    </div>
 
-        <section id="education">
-            <div class="content">
-                <h2><i class=""></i> Education</h2>
-                <p>Here are the details of my educational background, including the schools and extracurricular activities that have shaped my career.</p>
-                <div class="education-container">
-                    <div class="education-box">
-                        <h3>Marmara University</h3>
-                        <p class="date">2022 - Present</p>
-                        <p>Third-Year Student, Statistics Department</p>
-                        <h4>Key Courses and Activities</h4>
-                        <ul>
-                            <li>Artificial Intelligence</li>
-                            <li>Data Science</li>
-                            <li>Machine Learning with Python</li>
-                            <li>R Programming</li>
+    <!-- Control Center Dropdown -->
+    <div class="control-center-dropdown" id="controlCenterDropdown">
+        <div class="control-center-content">
+            <div class="control-group">
+                <div class="control-item dark-mode-control">
+                    <div class="control-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="control-label">Dark Mode</div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-item airdrop-control">
+                    <div class="control-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="control-label">AirDrop</div>
+                    <button class="airdrop-btn" id="airdropBtn">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- macOS Window Container -->
+    <div class="macos-window">
+        <!-- macOS Window Header (Title Bar with Traffic Lights) -->
+        <div class="titlebar">
+            <div class="traffic-lights">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <div class="window-title">Kayra's Portfolio</div>
+            <div class="titlebar-profile">
+                <div class="profile-info">
+                    <span class="profile-name">Kayra Kalkan</span>
+                    <span class="profile-role">Statistics Student</span>
+                </div>
+                <div class="profile-avatar">
+                    <img src="photo.jpg" alt="Kayra Kalkan">
+                </div>
+            </div>
+        </div>
+        <div class="window-content">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <nav>
+                    <ul id="nav-links">
+                        <li><a href="#overview" class="active">
+                            <i class="fas fa-user"></i>
+                            <span>Overview</span>
+                        </a></li>
+                        <li><a href="#education">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </a></li>
+                        <li><a href="#experiments">
+                            <i class="fas fa-flask"></i>
+                            <span>Experiments</span>
+                        </a></li>
+                        <li><a href="#projects">
+                            <i class="fas fa-code"></i>
+                            <span>Projects</span>
+                        </a></li>
+                        <li><a href="#languages">
+                            <i class="fas fa-language"></i>
+                            <span>Languages</span>
+                        </a></li>
+                        <li><a href="#volunteering">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Volunteering</span>
+                        </a></li>
+                        <li><a href="#skills">
+                            <i class="fas fa-tools"></i>
+                            <span>Skills</span>
+                        </a></li>
+                        <li><a href="#hobbies">
+                            <i class="fas fa-heart"></i>
+                            <span>Hobbies</span>
+                        </a></li>
+                        <li><a href="#contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a></li>
+                    </ul>
+                    
+                    <div class="sidebar-divider"></div>
+                    
+                    <div class="resume-container">
+                        <a href="cv.pdf" target="_blank" class="resume-button">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Resume</span>
+                        </a>
+                    </div>
+                    
+                    <div class="sidebar-divider"></div>
+                    
+                    <div class="social-icons">
+                        <a href="https://github.com/Kayrakalkan" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kayra-kalkan/?trk=opento_sprofile_goalscard" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:kalkankayra@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+905456461027" title="Phone">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+            </aside>
+            
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <section id="overview" class="content-section">
+                    <div class="section-card">
+                        <h1>Welcome to My Portfolio</h1>
+                        <p>Hi, I'm a fourth-year Statistics student at Marmara University with a strong passion for data science, AI, and software development. I enjoy turning raw data into actionable insights and building smart solutions that solve real-world problems. My journey in tech started in high school, and since then I've explored a variety of projects—from machine learning models and automation tools to AI-powered applications.</p>
+                        <p>I also participated in an ESC voluntary project in Budapest, which gave me a brief experience working in an international environment. Beyond that, I particularly enjoy identifying gaps or areas for improvement and developing creative solutions, often combining my hobbies with software development. This mindset drives me to continuously experiment, learn new technologies, and create projects that are both practical and personally meaningful.</p>
+                    </div>
+                </section>
+
+                <section id="education" class="content-section">
+                    <div class="section-card">
+                        <h2>Education</h2>
+                        <p class="section-description">Here are the details of my educational background, including the schools and extracurricular activities that have shaped my career.</p>
+                        <div class="education-container">
+                            <div class="education-box card">
+                                <h3>Marmara University</h3>
+                                <p class="date">2022 - Present</p>
+                                <p class="role">Fourth-Year Student, Statistics Department</p>
+                                <h4>Key Courses and Activities</h4>
+                                <ul>
+                                    <li>Artificial Intelligence</li>
+                                    <li>Data Science</li>
+                                    <li>Machine Learning with Python</li>
+                                    <li>R Programming</li>
+                                </ul>
+                            </div>
+                            <div class="education-box card">
+                                <h3>Şişli Anadolu High School</h3>
+                                <p class="date">2018 - 2022</p>
+                                <p class="role">High School Diploma</p>
+                                <h4>Clubs & Activities</h4>
+                                <ul>
+                                    <li>Basketball Team - Member</li>
+                                    <li>Volunteer Projects - Active Participant</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experiments" class="content-section">
+                    <div class="section-card">
+                        <h2>Experiments</h2>
+                        <p class="section-description">Here are some of the experiments I've worked on during my academic journey, which allowed me to explore and learn new skills in technology, AI, and Data Science.</p>
+                        <div class="experiment-container">
+                            <div class="experiment-box card">
+                                <h3>Metariom Soft - VR Game Developer</h3>
+                                <p>During my internship at Metariom Soft, I worked on developing VR projects, which was a completely new experience for me. This opportunity allowed me to grow in the field of VR and enhance my ability to learn independently. A portion of my work was done remotely, giving me the chance to experience remote working systems while also enjoying the benefits of working in an office environment. Collaborating with a team of international colleagues enriched my understanding of different languages and cultures, making this internship a valuable professional and personal growth experience.</p>
+                                <div class="skills">
+                                    <span class="skill-tag unrealengine">Unreal Engine</span>
+                                    <span class="skill-tag vr">VR</span>
+                                </div>
+                                <p class="date">May 2024 - November 2024</p>
+                            </div>
+                            <div class="experiment-box card">
+                                <h3>MarunGPT: AI-Powered University Assistance System</h3>
+                                <p>At my university, I developed MarunGPT, a project that uses AI to assist students by answering their questions about university-related topics. I worked on integrating NLP for keyword extraction, implementing Elasticsearch to retrieve relevant documents, and using AI to generate student-friendly responses. This project improved my skills in natural language processing, data retrieval, and AI-driven insights, and taught me how to create user-centric solutions for complex information systems.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag elasticsearch">Elasticsearch</span>
+                                    <span class="skill-tag openai">OpenAI</span>
+                                </div>
+                                <p class="date">January 2024 - Present</p>
+                            </div>
+                            <div class="experiment-box card">
+                                <h3>Cocrm Internship - Data Mining</h3>
+                                <p>At Cocrm, I participated in data mining and analysis, where I worked with large datasets, identified patterns, and calculated success and error rates. This experience enhanced my data analysis skills and taught me how to extract meaningful insights from data.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag datascience">Data Analysis</span>
+                                </div>
+                                <p class="date">September 2024 - November 2024</p>
+                            </div>
+                            <div class="experiment-box card">
+                                <h3>Shield Games Soft</h3>
+                                <p>Founded my own game company, Shield Games Soft, where I developed and published four mobile games on major platforms. This gave me hands-on experience in full-cycle game development, from initial design to deployment.</p>
+                                <div class="skills">
+                                    <span class="skill-tag unrealengine">Unreal Engine</span>
+                                    <span class="skill-tag unity">Unity</span>
+                                </div>
+                                <p class="date">June 2021 - July 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                                </section>
+                
+                <section id="projects" class="content-section">
+                    <div class="section-card">
+                        <h2>Projects</h2>
+                        <p class="section-description">These are the major projects I've worked on, showcasing my technical skills and passion for innovation. From machine learning applications to web development, each project has been a step towards building solutions for real-world problems.</p>
+                        <div class="project-container">
+                            <!-- Top Priority Projects -->
+                            <div class="project-box card" data-project="tennis-prediction" data-github="https://github.com/Kayrakalkan/ml_tennis_matchs_predict">
+                                <h3>Tennis Match Prediction ML</h3>
+                                <p>An end-to-end machine learning pipeline predicting ATP tennis match outcomes. The system uses domain-knowledge–driven feature engineering (Elo ratings, head-to-head data, surface specialization, recent performance metrics, tournament context) and compares multiple ML algorithms. The project demonstrates that simple, well-engineered features with a Logistic Regression model outperform more complex models, achieving ~72.9% accuracy.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag pandas">Pandas</span>
+                                    <span class="skill-tag ml">Scikit-learn</span>
+                                    <span class="skill-tag xgboost">XGBoost</span>
+                                </div>
+                                <p class="date">August 2025</p>
+                            </div>
+                            
+                            <div class="project-box card" data-project="flights-tracker" data-github="https://github.com/Kayrakalkan">
+                                <h3>Flights Vacation Tracker — AI-Based</h3>
+                                <p>A Python automation and analysis tool that scrapes flight search platforms to find the cheapest air routes from two chosen origin countries across a user-selected date range. Flexible-destination support lets the system compare fares from both origins to fixed or flexible arrival zones. An AI itinerary engine composes multi-country / multi-city short trips (3, 4, or 5-day vacations) and ranks options by total cost for two travelers, suggesting optimal layovers and multi-city sequences. Built for private use (data scraping + Python processing) rather than production UI; currently running ongoing tests.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag playwright">Playwright</span>
+                                    <span class="skill-tag pandas">Pandas</span>
+                                    <span class="skill-tag ai">OpenAI</span>
+                                    <span class="skill-tag sqlite">SQLite</span>
+                                </div>
+                                <p class="date">Ongoing tests — 2025</p>
+                            </div>
+                            
+                            <div class="project-box card" data-project="cocrm" data-github="https://github.com/Kayrakalkan">
+                                <h3>CoCrm Data Mining Project</h3>
+                                <p>In this project, I worked with a dataset of 25,000 company names to gather contact information such as emails and phone numbers. Using web crawling techniques and proxy servers, I extracted data from company websites and processed it for usability. This experience honed my skills in data mining, web scraping, and managing large-scale data collection pipelines, all while addressing real-world challenges in data retrieval.</p>
+                                <div class="skills">
+                                    <span class="skill-tag crawling">Crawling</span>
+                                    <span class="skill-tag numpy">Numpy</span>
+                                    <span class="skill-tag pandas">Pandas</span>
+                                </div>
+                                <p class="date">September 2024</p>
+                            </div>
+                            
+                            <div class="project-box card" data-project="ai-lyrics" data-github="https://github.com/Kayrakalkan">
+                                <h3>AI-based Fine-Tuning Song Lyrics Translation</h3>
+                                <p>This project involved fine-tuning AI models to deliver contextually accurate translations for song lyrics. By training the AI with datasets of human-translated lyrics, I enabled it to provide meaningful translations that preserved the emotion and intent of the songs. Users can search for any song and access its AI-generated translation, making this a unique tool for understanding the deeper meaning of lyrics. During this project, I enhanced my skills in data preparation, preprocessing, and fine-tuning, gaining valuable insights into creating AI solutions tailored for creative tasks.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag ml">Machine Learning</span>
+                                </div>
+                                <p class="date">April 2024</p>
+                            </div>
+                            
+                            <!-- Additional Projects -->
+                            <div class="project-box card" data-project="sportcenter" data-github="https://github.com/Kayrakalkan/sportcenter_reservaiton_webapp">
+                                <h3>Sport Center Reservation WebApp</h3>
+                                <p>A full-stack web application to manage reservation of university sports facilities. Faculty members can book weekly training sessions via an interactive calendar, while administrators can manage all bookings, schedule events, cancel reservations, and manage users. Implemented features include role-based access control, real-time availability checking, conflict prevention (one-hour slots, weekly limit), and responsive UI.</p>
+                                <div class="skills">
+                                    <span class="skill-tag angular">Angular 19</span>
+                                    <span class="skill-tag dotnet">ASP.NET Core 9</span>
+                                    <span class="skill-tag ef">Entity Framework</span>
+                                    <span class="skill-tag postgresql">PostgreSQL</span>
+                                </div>
+                                <p class="date">March 2025</p>
+                            </div>
+                            
+                            <div class="project-box card" data-project="vacation-countdown" data-github="https://github.com/Kayrakalkan/vacation-countdown">
+                                <h3>Vacation Countdown & Planner App</h3>
+                                <p>A simple web application that lets users track the remaining days until their planned vacations, and send automatic daily reminders via SMS or WhatsApp. Users can add vacations, edit them, add notes, view all planned vacations, and receive daily reminders. The app is mobile-friendly and relatively lightweight, suitable for personal planning.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag flask">Flask</span>
+                                    <span class="skill-tag sqlite">SQLite</span>
+                                    <span class="skill-tag twilio">Twilio API</span>
+                                </div>
+                                <p class="date">November 2025</p>
+                            </div>
+                            
+                            <div class="project-box card" data-project="visa-checker" data-github="https://github.com/Kayrakalkan/visa_application">
+                                <h3>Visa Appointment Checker</h3>
+                                <p>A Python-based web automation tool that continuously monitors visa appointment availability on the targeted embassy/website. When a slot opens up, the system sends real-time SMS notifications to the user — eliminating the need to manually refresh the site. The tool uses browser automation to navigate the appointment site, fills out necessary fields, checks availability, and repeats the process at configurable intervals, handling retries and errors. Educational purposes only.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag playwright">Playwright</span>
+                                    <span class="skill-tag twilio">Twilio</span>
+                                    <span class="skill-tag asyncio">AsyncIO</span>
+                                </div>
+                                <p class="date">June 2025</p>
+                            </div>
+                            
+                            <div class="project-box card" data-project="tesla-monitor" data-github="https://github.com/Kayrakalkan/tesla_bot">
+                                <h3>Tesla Stock Monitor Bot</h3>
+                                <p>A Python automation bot that monitors the stock/inventory status of a specific car model (e.g. Tesla Model Y Long Range) on the Turkish Tesla website. When the desired vehicle becomes available, the bot sends an SMS alert to the user. It automates browser interactions, handles possible modal dialogs, and can be run periodically via Docker or cron for continuous monitoring.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag playwright">Playwright</span>
+                                    <span class="skill-tag twilio">Twilio</span>
+                                    <span class="skill-tag docker">Docker</span>
+                                </div>
+                                <p class="date">May 2025</p>
+                            </div>
+                            
+                            <div class="project-box card" data-project="instafinder" data-github="https://github.com/Kayrakalkan">
+                                <h3>Instafinder</h3>
+                                <p>Instafinder is a project where I utilized advanced facial recognition libraries to identify social media accounts with matching profile pictures. The system works by taking a target user's photo and a list of related accounts as input, analyzing them to find profile picture matches. Through this project, I gained hands-on experience with image processing techniques, facial recognition algorithms, and working with data vectors. While the system showcases strong technical capabilities, it was developed solely for educational and experimental purposes and is not publicly available.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag ai">AI</span>
+                                </div>
+                                <p class="date">November 2024</p>
+                            </div>
+                            <div class="project-box card" data-project="zara" data-github="https://github.com/Kayrakalkan">
+                                <h3>Zara Stock App</h3>
+                                <p>The Zara Stock App automates the process of tracking and purchasing desired products from Zara. By leveraging login cookies, the app monitors stock levels and automatically adds items to the cart when they become available. Users receive email notifications about the added products, and the app supports tracking multiple items through personalized lists. This project taught me about automation, cookie handling, and creating user-friendly notification systems that save time and improve the shopping experience.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag crawling">Crawling</span>
+                                </div>
+                                <p class="date">November 2023</p>
+                            </div>
+                            <div class="project-box card" data-project="travel-app" data-github="https://github.com/Kayrakalkan">
+                                <h3>Swift Travel App</h3>
+                                <p>The Swift Travel App was my introduction to mobile application development, designed to help users share their travel experiences. With features for uploading visited locations, writing reviews, and marking them on a map, the app allowed users to build a community of travel enthusiasts. Developing this app helped me understand the foundations of user experience, mobile design, and app functionality.</p>
+                                <div class="skills">
+                                    <span class="skill-tag swift">Swift</span>
+                                    <span class="skill-tag firebase">Firebase</span>
+                                </div>
+                                <p class="date">June 2020</p>
+                            </div>
+                            <div class="project-box card" data-project="tennis-app" data-github="https://github.com/Kayrakalkan">
+                                <h3>Apple Watch Tennis Counter App</h3>
+                                <p>This project focused on developing an Apple Watch app for tennis players to easily track their scores during matches. Players can log games, sets, and individual points, ensuring they never lose track of their progress. The app was a step forward in understanding wearable app development and creating simple yet effective solutions tailored for niche user needs.</p>
+                                <div class="skills">
+                                    <span class="skill-tag swift">Swift</span>
+                                </div>
+                                <p class="date">October 2021</p>
+                            </div>
+                            <div class="project-box card" data-project="fullstack" data-github="https://github.com/Kayrakalkan">
+                                <h3>Business Website - Full Stack</h3>
+                                <p>In this project, I developed a comprehensive company management system using C# and MySQL, focusing on functionalities like stock tracking, product addition, removal, and updates. The system included role-based access controls for dashboards, sales, admin, and user permissions. On the frontend, I utilized Angular for a modern and responsive interface, while backend APIs were built and tested using Postman. This project allowed me to gain hands-on experience in full-stack development, including web API creation, database management, and frontend-backend integration.</p>
+                                <div class="skills">
+                                    <span class="skill-tag csharp">C#</span>
+                                    <span class="skill-tag mysql">MySQL</span>
+                                    <span class="skill-tag angular">Angular</span>
+                                </div>
+                                <p class="date">April 2020</p>
+                            </div>
+                            <div class="project-box card" data-project="games" data-github="https://github.com/Kayrakalkan">
+                                <h3>Game Projects</h3>
+                                <p>During the pandemic, I explored game development as a high school student, designing and publishing several games on app stores. These projects provided me with hands-on experience in managing production and testing environments, as well as understanding marketing strategies for app visibility. Developing games also nurtured my creativity and strengthened my ability to learn independently by tackling technical challenges and experimenting with new tools.</p>
+                                <div class="skills">
+                                    <span class="skill-tag unrealengine">Unreal Engine</span>
+                                    <span class="skill-tag unity">Unity</span>
+                                </div>
+                                <p class="date">June 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="languages" class="content-section">
+                    <div class="section-card">
+                        <h2>Languages</h2>
+                        <ul class="info-list">
+                            <li><strong>English:</strong> Upper intermediate - B2</li>
+                            <li><strong>Turkish:</strong> Native language</li>
                         </ul>
                     </div>
-                    <div class="education-box">
-                        <h3>Şişli Anadolu High School</h3>
-                        <p class="date">2018 - 2022</p>
-                        <p>High School Diploma</p>
-                        <h4>Clubs & Activities</h4>
-                        <ul>
-                            <li>Basketball Team - Member</li>
-                            <li>Volunteer Projects - Active Participant</li>
-                        </ul>
+                </section>
+                
+                <!-- Volunteering Section -->
+                <section id="volunteering" class="content-section">
+                    <div class="section-card">
+                        <h2>Volunteering</h2>
+                        <p class="section-description">Community engagement and volunteer experiences</p>
+                        
+                        <div class="volunteering-container">
+                            <!-- BAGázs Budapest - Most Recent -->
+                            <div class="volunteering-box card">
+                                <h3>BAGázs – Step In, Step Out of Comfort Zone</h3>
+                                <p class="date">September 23, 2025 - Present</p>
+                                <p class="location">Budapest, Hungary</p>
+                                <h4>Activities</h4>
+                                <ul>
+                                    <li>ESC Voluntary Project focusing on personal development</li>
+                                    <li>Strengthened communication skills and adapted to responsibilities outside my field</li>
+                                    <li>Living and working effectively in a new country and language environment</li>
+                                    <li>Improved cultural awareness and independence</li>
+                                </ul>
+                                <h4>Skills Gained</h4>
+                                <div class="skills">
+                                    <span class="skill-tag">Cross-Cultural Communication</span>
+                                    <span class="skill-tag">Adaptability</span>
+                                    <span class="skill-tag">Independence</span>
+                                    <span class="skill-tag">Cultural Awareness</span>
+                                    <span class="skill-tag">Collaboration</span>
+                                </div>
+                            </div>
+                            
+                            <!-- ESN Marmara -->
+                            <div class="volunteering-box card">
+                                <h3>ESN Marmara</h3>
+                                <p class="date">2024 - Present</p>
+                                <p class="location">Istanbul, Turkey</p>
+                                <h4>Activities</h4>
+                                <ul>
+                                    <li>Active member and volunteer organizing events for international students</li>
+                                    <li>Supported cultural exchange activities</li>
+                                    <li>Helped newcomers adapt to university life</li>
+                                    <li>Enhanced teamwork and event coordination skills</li>
+                                </ul>
+                                <h4>Skills Gained</h4>
+                                <div class="skills">
+                                    <span class="skill-tag">Event Coordination</span>
+                                    <span class="skill-tag">Teamwork</span>
+                                    <span class="skill-tag">Intercultural Communication</span>
+                                    <span class="skill-tag">Student Support</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </section>
+            
+                <section id="skills" class="content-section">
+                    <div class="section-card">
+                        <h2>Skills</h2>
+                        <p class="section-description">Technical and soft skills acquired throughout my career</p>
+                        <div class="skills-simple-grid">
+                            <div class="skill-group-simple">
+                                <h4>Programming Languages</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag javascript">JavaScript</span>
+                                    <span class="skill-tag r">R</span>
+                                    <span class="skill-tag swift">Swift</span>
+                                    <span class="skill-tag csharp">C#</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-group-simple">
+                                <h4>Web Development</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag angular">Angular 19</span>
+                                    <span class="skill-tag flask">Flask</span>
+                                    <span class="skill-tag dotnet">ASP.NET Core 9</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-group-simple">
+                                <h4>Data & Machine Learning</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag ml">Machine Learning</span>
+                                    <span class="skill-tag pandas">Pandas</span>
+                                    <span class="skill-tag numpy">NumPy</span>
+                                    <span class="skill-tag xgboost">XGBoost</span>
+                                    <span class="skill-tag ai">Scikit-learn</span>
+                                    <span class="skill-tag">TensorFlow</span>
+                                    <span class="skill-tag">NLP</span>
+                                    <span class="skill-tag">Data Visualization</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-group-simple">
+                                <h4>Databases & ORM</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag postgresql">PostgreSQL</span>
+                                    <span class="skill-tag sqlite">SQLite</span>
+                                    <span class="skill-tag mysql">MySQL</span>
+                                    <span class="skill-tag ef">Entity Framework</span>
+                                    <span class="skill-tag elasticsearch">Elasticsearch</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-group-simple">
+                                <h4>Automation & DevOps</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag playwright">Playwright</span>
+                                    <span class="skill-tag twilio">Twilio</span>
+                                    <span class="skill-tag asyncio">AsyncIO</span>
+                                    <span class="skill-tag docker">Docker</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-group-simple">
+                                <h4>AI Tools & Analytics</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag openai">OpenAI</span>
+                                    <span class="skill-tag">Excel</span>
+                                    <span class="skill-tag">Power BI</span>
+                                    <span class="skill-tag">Tableau</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-group-simple">
+                                <h4>Game Development</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag unity">Unity</span>
+                                    <span class="skill-tag unrealengine">Unreal Engine</span>
+                                    <span class="skill-tag vr">VR Development</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-group-simple">
+                                <h4>Soft Skills</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag">Communication</span>
+                                    <span class="skill-tag">Problem-Solving</span>
+                                    <span class="skill-tag">Team Collaboration</span>
+                                    <span class="skill-tag">Adaptability</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="hobbies" class="content-section">
+                    <div class="section-card">
+                        <h2>Hobbies</h2>
+                        <p class="section-description">I enjoy a variety of hobbies that help me stay balanced and inspired, such as:</p>
+                        <div class="hobbies-grid">
+                            <div class="hobby-item">
+                                <i class="fas fa-basketball-ball"></i>
+                                <h4>Basketball</h4>
+                                <p>Faculty Team Player</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <h4>Technology</h4>
+                                <p>Exploring New Tech</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-futbol"></i>
+                                <h4>Football</h4>
+                                <p>Recreational Play</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-table-tennis"></i>
+                                <h4>Tennis</h4>
+                                <p>Weekend Matches</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-plane"></i>
+                                <h4>Travel</h4>
+                                <p>Exploring Cultures</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-chess"></i>
+                                <h4>Chess</h4>
+                                <p>Strategic Thinking</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="contact" class="content-section">
+                    <div class="section-card">
+                        <h2>Contact</h2>
+                        <p class="section-description">Feel free to reach out to me through any of the following channels:</p>
+                        <div class="contact-grid">
+                            <a href="mailto:kalkankayra@gmail.com" class="contact-card">
+                                <i class="fas fa-envelope"></i>
+                                <h4>Email</h4>
+                                <p>kalkankayra@gmail.com</p>
+                            </a>
+                            <a href="tel:+905456461027" class="contact-card">
+                                <i class="fas fa-phone-alt"></i>
+                                <h4>Phone</h4>
+                                <p>+90 545 646 1027</p>
+                            </a>
+                            <a href="https://github.com/Kayrakalkan" target="_blank" class="contact-card">
+                                <i class="fab fa-github"></i>
+                                <h4>GitHub</h4>
+                                <p>@Kayrakalkan</p>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kayra-kalkan/?trk=opento_sprofile_goalscard" target="_blank" class="contact-card">
+                                <i class="fab fa-linkedin"></i>
+                                <h4>LinkedIn</h4>
+                                <p>Kayra Kalkan</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+                <div id="modalSkills" class="skills"></div>
+                <p id="modalDate" class="date"></p>
+                <div class="modal-actions">
+                    <button class="modal-btn primary" id="modalLink">View Details</button>
+                    <button class="modal-btn secondary" id="modalClose">Close</button>
                 </div>
             </div>
-        </section>
-
-        <section id="experiments">
-            <div class="content">
-                <h2><i class=""></i> Experiments</h2>
-                <p>Here are some of the experiments I've worked on during my academic journey, which allowed me to explore and learn new skills in technology, AI, and Data Science.</p>
-                <div class="experiment-container">
-                    <div class="experiment-box">
-                        <h3>Metariom Soft - VR Game Developer</h3>
-                        <p>During my internship at Metariom Soft, I worked on developing VR projects, which was a completely new experience for me. This opportunity allowed me to grow in the field of VR and enhance my ability to learn independently. A portion of my work was done remotely, giving me the chance to experience remote working systems while also enjoying the benefits of working in an office environment. Collaborating with a team of international colleagues enriched my understanding of different languages and cultures, making this internship a valuable professional and personal growth experience.</p>
-                        <div class="skills">
-                            <span class="unrealengine">Unreal Engine</span>
-                            <span class="vr">VR</span>
-                        </div>
-                        <p class="date">Date: May 2024 - November 2024</p>
-                    </div>
-                    <div class="experiment-box">
-                        <h3>MarunGPT: AI-Powered University Assistance System</h3>
-                        <p>At my university, I developed MarunGPT, a project that uses AI to assist students by answering their questions about university-related topics. I worked on integrating NLP for keyword extraction, implementing Elasticsearch to retrieve relevant documents, and using AI to generate student-friendly responses. This project improved my skills in natural language processing, data retrieval, and AI-driven insights, and taught me how to create user-centric solutions for complex information systems.</p>
-                        <div class="skills">
-                            <span class="python">Python</span>
-                            <span class="elasticsearch">Elasticsearch</span>
-                            <span class="openai">OpenAi</span>
-                        </div>
-                        <p class="date">Date: January 2024 - Present</p>
-                    </div>
-                    <div class="experiment-box">
-                        <h3>Cocrm Internship - Data Mining</h3>
-                        <p>At Cocrm, I participated in data mining and analysis, where I worked with large datasets, identified patterns, and calculated success and error rates. This experience enhanced my data analysis skills and taught me how to extract meaningful insights from data.</p>
-                        <div class="skills">
-                            <span class="python">Python</span>
-                            <span class="datascience">Data Analysis</span>
-                        </div>
-                        <p class="date">Date: September 2024 - November 2024</p>
-                    </div>
-                    <div class="experiment-box">
-                        <h3>Shield Games Soft</h3>
-                        <p>Founded my own game company, Shield Games Soft, where I developed and published four mobile games on major platforms. This gave me hands-on experience in full-cycle game development, from initial design to deployment.</p>
-                        <div class="skills">
-                            <span class="unrealengine">Unreal Engine</span>
-                            <span class="unity">Unity</span>
-                        </div>
-                        <p class="date">Date: June 2021 - July 2022</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="content">
-                <h2><i class=""></i> Projects</h2>
-                <p>These are the major projects I’ve worked on, showcasing my technical skills and passion for innovation. From machine learning applications to web development, each project has been a step towards building solutions for real-world problems.</p>
-                <div class="project-container">
-                    <div class="project-box">
-                        <h3>Instafinder</h3>
-                        <p>Instafinder is a project where I utilized advanced facial recognition libraries to identify social media accounts with matching profile pictures. The system works by taking a target user’s photo and a list of related accounts as input, analyzing them to find profile picture matches. Through this project, I gained hands-on experience with image processing techniques, facial recognition algorithms, and working with data vectors. While the system showcases strong technical capabilities, it was developed solely for educational and experimental purposes and is not publicly available.</p>
-                        <div class="skills">
-                            <span class="python">Python</span>
-                            <span class="ai">AI</span>
-                        </div>
-                        <p class="date">Date: November 2024</p>
-                    </div>
-                    <div class="project-box">
-                        <h3>AI-based Fine-Tuning Song Lyrics Translation</h3>
-                        <p>This project involved fine-tuning AI models to deliver contextually accurate translations for song lyrics. By training the AI with datasets of human-translated lyrics, I enabled it to provide meaningful translations that preserved the emotion and intent of the songs. Users can search for any song and access its AI-generated translation, making this a unique tool for understanding the deeper meaning of lyrics. During this project, I enhanced my skills in data preparation, preprocessing, and fine-tuning, gaining valuable insights into creating AI solutions tailored for creative tasks.</p>
-                        <div class="skills">
-                            <span class="python">Python</span>
-                            <span class="ml">Machine Learning</span>
-                        </div>
-                        <p class="date">Date: April 2024</p>
-                    </div>
-                    <div class="project-box">
-                        <h3>CoCrm Data Mining Project</h3>
-                        <p>In this project, I worked with a dataset of 25,000 company names to gather contact information such as emails and phone numbers. Using web crawling techniques and proxy servers, I extracted data from company websites and processed it for usability. This experience honed my skills in data mining, web scraping, and managing large-scale data collection pipelines, all while addressing real-world challenges in data retrieval.</p>
-                        <div class="skills">
-                            <span class="crawling">Crawling</span>
-                            <span class="numpy">Numpy</span>
-                            <span class="pandas">Pandas</span>
-                        </div>
-                        <p class="date">Date: September 2024</p>
-                    </div>
-                    <div class="project-box">
-                        <h3>Zara Stock App</h3>
-                        <p>The Zara Stock App automates the process of tracking and purchasing desired products from Zara. By leveraging login cookies, the app monitors stock levels and automatically adds items to the cart when they become available. Users receive email notifications about the added products, and the app supports tracking multiple items through personalized lists. This project taught me about automation, cookie handling, and creating user-friendly notification systems that save time and improve the shopping experience.</p>
-                        <div class="skills">
-                            <span class="python">Python</span>
-                            <span class="crawling">Crawling</span>
-                        </div>
-                        <p class="date">Date: November 2023</p>
-                    </div>
-                    <div class="project-box">
-                        <h3>Swift Travel App</h3>
-                        <p>The Swift Travel App was my introduction to mobile application development, designed to help users share their travel experiences. With features for uploading visited locations, writing reviews, and marking them on a map, the app allowed users to build a community of travel enthusiasts. Developing this app helped me understand the foundations of user experience, mobile design, and app functionality.</p>
-                        <div class="skills">
-                            <span class="swift">Swift</span>
-                            <span class="firebase">Firebase</span>
-                        </div>
-                        <p class="date">Date: June 2020</p>
-                    </div>
-                    <div class="project-box">
-                        <h3>Apple Watch Tennis Counter App</h3>
-                        <p>This project focused on developing an Apple Watch app for tennis players to easily track their scores during matches. Players can log games, sets, and individual points, ensuring they never lose track of their progress. The app was a step forward in understanding wearable app development and creating simple yet effective solutions tailored for niche user needs.</p>
-                        <div class="skills">
-                            <span class="swift">Swift</span>
-                        </div>
-                        <p class="date">Date: October 2021</p>
-                    </div>
-                    <div class="project-box">
-                        <h3>Business Website - Full Stack</h3>
-                        <p>In this project, I developed a comprehensive company management system using C# and MySQL, focusing on functionalities like stock tracking, product addition, removal, and updates. The system included role-based access controls for dashboards, sales, admin, and user permissions. On the frontend, I utilized Angular for a modern and responsive interface, while backend APIs were built and tested using Postman. This project allowed me to gain hands-on experience in full-stack development, including web API creation, database management, and frontend-backend integration.</p>
-                        <div class="skills">
-                            <span class="csharp">C#</span>
-                            <span class="mysql">MySQL</span>
-                            <span class="angular">Angular</span>
-                        </div>
-                        <p class="date">Date: April 2020</p>
-                    </div>
-                    <div class="project-box">
-                        <h3>Game Projects</h3>
-                        <p>During the pandemic, I explored game development as a high school student, designing and publishing several games on app stores. These projects provided me with hands-on experience in managing production and testing environments, as well as understanding marketing strategies for app visibility. Developing games also nurtured my creativity and strengthened my ability to learn independently by tackling technical challenges and experimenting with new tools.</p>
-                        <div class="skills">
-                            <span class="unrealengine">Unreal Engine</span>
-                            <span class="unity">Unity</span>
-                        </div>
-                        <p class="date">Date: June 2021</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="languages">
-            <div class="content">
-                <h2><i class=""></i> Languages</h2>
-                <ul>
-                    <li><strong>English:</strong> Upper intermediate - B2</li>
-                    <li><strong>Turkish:</strong> Native language</li>
-                </ul>
-            </div>
-        </section>
-        <section id="skills">
-            <div class="content">
-                <h2><i class=""></i> Skills</h2>
-                <p>Here are some of the technical and soft skills I have acquired throughout my career:</p>
-                <ul>
-                    <li><strong>Programming Languages:</strong> Python, R, JavaScript, Swift, .NET</li>
-                    <li><strong>Data Science:</strong> Machine Learning, Data Analysis, Data Visualization, Reinforcement, Learning NLP</li>
-                    <li><strong>Data Analysis:</strong> Excell, Power BI, Tableau</li>
-                    <li><strong>Tools:</strong> Numpy,Pandas,OpenAi,TensorFlow, SQL, Elasticsearch</li>
-                    <li><strong>Game Development:</strong> Unity, Unreal Engine, VR Development</li>
-                    <li><strong>Soft Skills:</strong> Communication, Problem-Solving, Team Collaboration</li>
-                </ul>
-            </div>
-        </section>
-        <section id="hobbies">
-            <div class="content">
-                <h2><i class=""></i> Hobbies</h2>
-                <p>I enjoy a variety of hobbies that help me stay balanced and inspired, such as:</p>
-                <ul>
-                    <li>Playing basketball - Faculty Team</li>
-                    <li>Exploring new technologies</li>
-                    <li>Football & Tennis</li>
-                    <li>Traveling & Exploring Foreign Cultures</li>
-                    <li>Chess</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
