@@ -1976,14 +1976,28 @@ p {
         padding: 0 12px;
     }
     
-    /* Show window title but smaller on mobile */
+    /* Hide "Kayra's Portfolio" text on mobile */
     .window-title {
-        font-size: 11px;
+        display: none;
     }
     
-    /* Hide profile picture and info on mobile */
+    /* Show profile picture on mobile */
     .titlebar-profile {
-        display: none;
+        display: flex;
+    }
+    
+    .titlebar-profile .profile-info {
+        display: none; /* Hide text but keep avatar */
+    }
+    
+    .titlebar-profile .profile-avatar {
+        display: block;
+    }
+    
+    .titlebar-profile .profile-avatar img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
     }
     
     .menubar-center {
@@ -2172,9 +2186,15 @@ p {
         padding: 0 8px;
     }
     
-    /* Keep window title visible but smaller on small mobile */
+    /* Keep window title hidden on small phones too */
     .window-title {
-        font-size: 10px;
+        display: none;
+    }
+    
+    /* Keep profile avatar visible and slightly smaller */
+    .titlebar-profile .profile-avatar img {
+        width: 28px;
+        height: 28px;
     }
     
     .control-center-dropdown {
