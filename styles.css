@@ -1838,9 +1838,13 @@ p {
 .modal-body #modalDescription {
     margin-bottom: 16px;
     line-height: 1.6;
+    color: var(--macos-text-primary);
 }
 
-.modal-body #modalSkills {
+.modal-body .modal-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin: 20px 0;
 }
 
@@ -1859,6 +1863,25 @@ p {
     cursor: pointer;
     transition: all 0.15s ease;
     border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.modal-btn.github-btn {
+    background: #24292e;
+    color: white;
+}
+
+.modal-btn.github-btn:hover {
+    background: #1a1e22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(36, 41, 46, 0.4);
+}
+
+.modal-btn.github-btn i {
+    font-size: 16px;
 }
 
 .modal-btn.primary {
@@ -2309,6 +2332,46 @@ body.dark-mode .toggle-slider {
 
 body.dark-mode .toggle-switch input:checked + .toggle-slider {
     background-color: #0a84ff;
+}
+
+/* Dark mode modal */
+body.dark-mode .modal {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .modal-content {
+    background: #2d2d2d;
+    border: 1px solid #404040;
+}
+
+body.dark-mode .modal-header {
+    border-bottom: 1px solid #404040;
+}
+
+body.dark-mode .modal-header h3 {
+    color: #f5f5f7;
+}
+
+body.dark-mode .modal-close {
+    background: #404040;
+    color: #f5f5f7;
+}
+
+body.dark-mode .modal-close:hover {
+    background: #4a4a4a;
+}
+
+body.dark-mode .modal-body #modalDescription {
+    color: #d1d1d6;
+}
+
+body.dark-mode .modal-btn.secondary {
+    background: #404040;
+    color: #f5f5f7;
+}
+
+body.dark-mode .modal-btn.secondary:hover {
+    background: #4a4a4a;
 }
 
 /* Dark mode scrollbar */

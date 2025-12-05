@@ -314,22 +314,55 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     // ============================================
-    // Project Cards - Direct GitHub Link
+    // Project Cards - Modal Popup
     // ============================================
     
     const projectCards = document.querySelectorAll('.project-box.card');
+    const projectModal = document.getElementById('projectModal');
+    const modalClose = projectModal ? projectModal.querySelector('.modal-close') : null;
+    const modalOverlay = projectModal;
     
     projectCards.forEach(card => {
-        // Add cursor pointer and visual feedback
+        // Add cursor pointer
         card.style.cursor = 'pointer';
         
         card.addEventListener('click', function(e) {
             // Prevent default if clicking on a link inside
             if (e.target.tagName === 'A') return;
             
+            // Get project data
+            const projectTitle = this.querySelector('h3').textContent;
+            const projectDescription = this.querySelector('p').textContent;
             const githubUrl = this.getAttribute('data-github');
-            if (githubUrl) {
-                window.open(githubUrl, '_blank');
+            const techTags = Array.from(this.querySelectorAll('.tech-tag')).map(tag => tag.textContent);
+            
+            // Populate modal
+            if (projectModal) {
+                projectModal.querySelector('#modalTitle').textContent = projectTitle;
+                projectModal.querySelector('#modalDescription').textContent = projectDescription;
+                
+                // Add tech tags
+                const modalSkills = projectModal.querySelector('#modalSkills');
+                modalSkills.innerHTML = '';
+                techTags.forEach(tech => {
+                    const tag = document.createElement('span');
+                    tag.className = 'tech-tag';
+                    tag.textContent = tech;
+                    modalSkills.appendChild(tag);
+                });
+                
+                // Set GitHub link
+                const githubButton = projectModal.querySelector('#modalGithubLink');
+                if (githubUrl && githubButton) {
+                    githubButton.onclick = () => window.open(githubUrl, '_blank');
+                    githubButton.style.display = 'inline-flex';
+                } else if (githubButton) {
+                    githubButton.style.display = 'none';
+                }
+                
+                // Show modal
+                projectModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
             }
         });
         
@@ -343,6 +376,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Close modal handlers
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            projectModal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    if (projectModal) {
+        // Close when clicking outside modal content
+        projectModal.addEventListener('click', function(e) {
+            if (e.target === projectModal) {
+                projectModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close modal button
+        const modalCloseBtn = projectModal.querySelector('#modalClose');
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', function() {
+                projectModal.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && projectModal.classList.contains('show')) {
+                projectModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
     
     // ============================================
     // Card Hover Effects Enhancement
@@ -354,30 +422,6 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('mouseenter', function() {
             this.style.transition = 'all 0.25s ease';
         });
-        
-        // Add ripple on non-project cards for visual feedback
-        if (!card.classList.contains('project-box')) {
-            card.addEventListener('click', function(e) {
-                const feedback = document.createElement('div');
-                feedback.className = 'click-feedback';
-                feedback.style.cssText = `
-                    position: absolute;
-                    top: ${e.offsetY}px;
-                    left: ${e.offsetX}px;
-                    width: 10px;
-                    height: 10px;
-                    background: rgba(0, 122, 255, 0.3);
-                    border-radius: 50%;
-                    transform: scale(0);
-                    animation: ripple 0.6s ease-out;
-                    pointer-events: none;
-                `;
-                this.style.position = 'relative';
-                this.appendChild(feedback);
-                
-                setTimeout(() => feedback.remove(), 600);
-            });
-        }
     });
     
     // Add animations to document head only once
@@ -385,13 +429,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const animationStyles = document.createElement('style');
         animationStyles.id = 'custom-animations';
         animationStyles.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(20);
-                    opacity: 0;
-                }
-            }
-            
             .card.expanded {
                 grid-column: 1 / -1;
                 z-index: 10;
