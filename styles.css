@@ -1976,9 +1976,9 @@ p {
         padding: 0 12px;
     }
     
-    /* Hide window title on mobile to prevent overlap */
+    /* Show window title but smaller on mobile */
     .window-title {
-        display: none;
+        font-size: 11px;
     }
     
     /* Hide profile picture and info on mobile */
@@ -2042,6 +2042,11 @@ p {
         max-width: 100%;
         overflow-x: hidden;
         margin: 0;
+    }
+    
+    /* Hide "Welcome to My Portfolio" heading on mobile */
+    #overview h1 {
+        display: none;
     }
     
     .content-section {
@@ -2167,9 +2172,9 @@ p {
         padding: 0 8px;
     }
     
-    /* Keep window title hidden on small mobile too */
+    /* Keep window title visible but smaller on small mobile */
     .window-title {
-        display: none;
+        font-size: 10px;
     }
     
     .control-center-dropdown {
