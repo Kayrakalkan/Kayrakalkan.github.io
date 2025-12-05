@@ -863,6 +863,24 @@ p {
 }
 
 /* ============================================
+   Clickable Cards (Education, Experiments, Volunteering)
+   ============================================ */
+
+.clickable-card {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.clickable-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.clickable-card h3 a {
+    pointer-events: none;
+}
+
+/* ============================================
    Project Card Clickable Styling
    ============================================ */
 

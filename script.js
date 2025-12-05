@@ -445,6 +445,35 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     // ============================================
+    // Clickable Cards with External Links
+    // ============================================
+    
+    const clickableCards = document.querySelectorAll('.clickable-card');
+    
+    clickableCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        
+        card.addEventListener('click', function(e) {
+            // Prevent if clicking on a link inside the card
+            if (e.target.tagName === 'A') return;
+            
+            const link = this.getAttribute('data-link');
+            if (link) {
+                window.open(link, '_blank');
+            }
+        });
+        
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-4px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    
+    // ============================================
     // Responsive Mobile Menu Toggle (if needed)
     // ============================================
     
