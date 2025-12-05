@@ -756,6 +756,7 @@ body {
 
 .content-section {
     margin-bottom: 48px;
+    scroll-margin-top: 80px;
 }
 
 .content-section:last-child {
