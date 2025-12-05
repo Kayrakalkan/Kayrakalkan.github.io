@@ -583,12 +583,14 @@ body {
     font-size: 16px;
     transition: all 0.15s ease;
     border: 1px solid transparent;
+    text-decoration: none;
 }
 
 .social-icons a:hover {
     background: rgba(0, 0, 0, 0.04);
     color: var(--macos-accent);
     border-color: var(--macos-border);
+    text-decoration: none;
 }
 
 /* ============================================
@@ -1377,6 +1379,67 @@ p {
     background: #e0f7fa; 
     color: #00695c; 
     border: 1px solid #b2ebf2;
+}
+
+/* Additional Skills - New Colors */
+.skill-tag.tensorflow { 
+    background: #fff3e0; 
+    color: #ef6c00; 
+    border: 1px solid #ffe0b2;
+}
+
+.skill-tag.nlp { 
+    background: #e8f5e9; 
+    color: #388e3c; 
+    border: 1px solid #c8e6c9;
+}
+
+.skill-tag.datavis { 
+    background: #e1f5fe; 
+    color: #0277bd; 
+    border: 1px solid #b3e5fc;
+}
+
+.skill-tag.excel { 
+    background: #e8f5e9; 
+    color: #2e7d32; 
+    border: 1px solid #c8e6c9;
+}
+
+.skill-tag.powerbi { 
+    background: #fff8e1; 
+    color: #f9a825; 
+    border: 1px solid #ffecb3;
+}
+
+.skill-tag.tableau { 
+    background: #e3f2fd; 
+    color: #1976d2; 
+    border: 1px solid #bbdefb;
+}
+
+.skill-tag.communication { 
+    background: #fce4ec; 
+    color: #c2185b; 
+    border: 1px solid #f8bbd0;
+}
+
+.skill-tag.problemsolving { 
+    background: #ede7f6; 
+    color: #5e35b1; 
+    border: 1px solid #d1c4e9;
+}
+
+.skill-tag.teamwork { 
+    background: #e0f2f1; 
+    color: #00897b; 
+    border: 1px solid #b2dfdb;
+}
+
+.skill-tag.adaptability { 
+    background: #fff3e0; 
+    color: #fb8c00; 
+    border: 1px solid #ffe0b2;
 }
 
 .skill-tag:hover {
@@ -2234,6 +2297,67 @@ body.dark-mode .skill-tag.sqlite {
     background: rgba(0, 188, 212, 0.15); 
     color: #4dd0e1; 
     border: 1px solid rgba(77, 208, 225, 0.3);
+}
+
+/* Dark mode - Additional Skills */
+body.dark-mode .skill-tag.tensorflow { 
+    background: rgba(255, 152, 0, 0.15); 
+    color: #ffb74d; 
+    border: 1px solid rgba(255, 183, 77, 0.3);
+}
+
+body.dark-mode .skill-tag.nlp { 
+    background: rgba(76, 175, 80, 0.15); 
+    color: #81c784; 
+    border: 1px solid rgba(129, 199, 132, 0.3);
+}
+
+body.dark-mode .skill-tag.datavis { 
+    background: rgba(3, 169, 244, 0.15); 
+    color: #4fc3f7; 
+    border: 1px solid rgba(79, 195, 247, 0.3);
+}
+
+body.dark-mode .skill-tag.excel { 
+    background: rgba(76, 175, 80, 0.15); 
+    color: #81c784; 
+    border: 1px solid rgba(129, 199, 132, 0.3);
+}
+
+body.dark-mode .skill-tag.powerbi { 
+    background: rgba(255, 193, 7, 0.15); 
+    color: #ffd54f; 
+    border: 1px solid rgba(255, 213, 79, 0.3);
+}
+
+body.dark-mode .skill-tag.tableau { 
+    background: rgba(33, 150, 243, 0.15); 
+    color: #64b5f6; 
+    border: 1px solid rgba(100, 181, 246, 0.3);
+}
+
+body.dark-mode .skill-tag.communication { 
+    background: rgba(233, 30, 99, 0.15); 
+    color: #f48fb1; 
+    border: 1px solid rgba(244, 143, 177, 0.3);
+}
+
+body.dark-mode .skill-tag.problemsolving { 
+    background: rgba(103, 58, 183, 0.15); 
+    color: #b39ddb; 
+    border: 1px solid rgba(179, 157, 219, 0.3);
+}
+
+body.dark-mode .skill-tag.teamwork { 
+    background: rgba(0, 150, 136, 0.15); 
+    color: #4db6ac; 
+    border: 1px solid rgba(77, 182, 172, 0.3);
+}
+
+body.dark-mode .skill-tag.adaptability { 
+    background: rgba(255, 152, 0, 0.15); 
+    color: #ffb74d; 
+    border: 1px solid rgba(255, 183, 77, 0.3);
 }
 
 /* Dark mode links and buttons */
