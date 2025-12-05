@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetSection) {
                 // Scroll with proper offset to show section title
-                const offsetTop = targetSection.offsetTop - 80;
+                const offsetTop = targetSection.offsetTop - 150;
                 
                 mainContent.scrollTo({
                     top: offsetTop,
