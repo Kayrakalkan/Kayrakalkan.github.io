@@ -1904,6 +1904,424 @@ p {
 }
 
 /* ============================================
+   Dark Mode Styles
+   ============================================ */
+
+body.dark-mode {
+    --macos-bg: #1a1a1a;
+    --macos-window-bg: #2d2d2d;
+    --macos-sidebar-bg: #252525;
+    --macos-card-bg: #333333;
+    --macos-border: #404040;
+    --macos-text-primary: #f5f5f7;
+    --macos-text-secondary: #a1a1a6;
+    --macos-accent: #0a84ff;
+    --macos-accent-hover: #409cff;
+    background: #1a1a1a;
+    color: #f5f5f7;
+}
+
+/* Dark mode menu bar */
+body.dark-mode .macos-menubar-top {
+    background: linear-gradient(to bottom, #2d2d2d 0%, #252525 100%);
+    border-bottom: 1px solid #404040;
+}
+
+body.dark-mode .apple-logo,
+body.dark-mode .menu-icon,
+body.dark-mode .menubar-datetime {
+    color: #f5f5f7;
+}
+
+/* Dark mode window */
+body.dark-mode .macos-window {
+    background: #2d2d2d;
+    border: 1px solid #404040;
+}
+
+body.dark-mode .titlebar {
+    background: linear-gradient(to bottom, #3a3a3a 0%, #2d2d2d 100%);
+    border-bottom: 1px solid #404040;
+}
+
+body.dark-mode .window-title,
+body.dark-mode .profile-name,
+body.dark-mode .profile-role {
+    color: #f5f5f7;
+}
+
+/* Dark mode sidebar */
+body.dark-mode .sidebar {
+    background: #252525;
+    border-right: 1px solid #404040;
+}
+
+body.dark-mode .sidebar nav ul li a {
+    color: #f5f5f7;
+}
+
+body.dark-mode .sidebar nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .sidebar nav ul li a.active {
+    background: rgba(10, 132, 255, 0.2);
+    color: #0a84ff;
+}
+
+/* Dark mode main content */
+body.dark-mode .main-content {
+    background: #2d2d2d;
+}
+
+body.dark-mode .section-card,
+body.dark-mode .card {
+    background: #333333;
+    border: 1px solid #404040;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #f5f5f7;
+}
+
+body.dark-mode p,
+body.dark-mode li {
+    color: #d1d1d6;
+}
+
+body.dark-mode .section-description {
+    color: #a1a1a6;
+}
+
+/* Dark mode skill tags - darker backgrounds with brighter text */
+body.dark-mode .skill-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e4e4e4;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .skill-tag.python { 
+    background: rgba(33, 150, 243, 0.15); 
+    color: #64b5f6; 
+    border: 1px solid rgba(100, 181, 246, 0.3);
+}
+
+body.dark-mode .skill-tag.r { 
+    background: rgba(3, 169, 244, 0.15); 
+    color: #4fc3f7; 
+    border: 1px solid rgba(79, 195, 247, 0.3);
+}
+
+body.dark-mode .skill-tag.js,
+body.dark-mode .skill-tag.javascript { 
+    background: rgba(255, 193, 7, 0.15); 
+    color: #ffd54f; 
+    border: 1px solid rgba(255, 213, 79, 0.3);
+}
+
+body.dark-mode .skill-tag.swift { 
+    background: rgba(255, 87, 34, 0.15); 
+    color: #ff8a65; 
+    border: 1px solid rgba(255, 138, 101, 0.3);
+}
+
+body.dark-mode .skill-tag.datascience { 
+    background: rgba(103, 58, 183, 0.15); 
+    color: #b39ddb; 
+    border: 1px solid rgba(179, 157, 219, 0.3);
+}
+
+body.dark-mode .skill-tag.elasticsearch { 
+    background: rgba(0, 150, 136, 0.15); 
+    color: #4db6ac; 
+    border: 1px solid rgba(77, 182, 172, 0.3);
+}
+
+body.dark-mode .skill-tag.dotnet { 
+    background: rgba(156, 39, 176, 0.15); 
+    color: #ce93d8; 
+    border: 1px solid rgba(206, 147, 216, 0.3);
+}
+
+body.dark-mode .skill-tag.unrealengine { 
+    background: rgba(96, 125, 139, 0.15); 
+    color: #b0bec5; 
+    border: 1px solid rgba(176, 190, 197, 0.3);
+}
+
+body.dark-mode .skill-tag.firebase { 
+    background: rgba(244, 67, 54, 0.15); 
+    color: #ef5350; 
+    border: 1px solid rgba(239, 83, 80, 0.3);
+}
+
+body.dark-mode .skill-tag.openai { 
+    background: rgba(139, 195, 74, 0.15); 
+    color: #aed581; 
+    border: 1px solid rgba(174, 213, 129, 0.3);
+}
+
+body.dark-mode .skill-tag.vr { 
+    background: rgba(233, 30, 99, 0.15); 
+    color: #f06292; 
+    border: 1px solid rgba(240, 98, 146, 0.3);
+}
+
+body.dark-mode .skill-tag.unity { 
+    background: rgba(63, 81, 181, 0.15); 
+    color: #7986cb; 
+    border: 1px solid rgba(121, 134, 203, 0.3);
+}
+
+body.dark-mode .skill-tag.ai { 
+    background: rgba(76, 175, 80, 0.15); 
+    color: #81c784; 
+    border: 1px solid rgba(129, 199, 132, 0.3);
+}
+
+body.dark-mode .skill-tag.ml { 
+    background: rgba(0, 150, 136, 0.15); 
+    color: #4db6ac; 
+    border: 1px solid rgba(77, 182, 172, 0.3);
+}
+
+body.dark-mode .skill-tag.numpy { 
+    background: rgba(255, 152, 0, 0.15); 
+    color: #ffb74d; 
+    border: 1px solid rgba(255, 183, 77, 0.3);
+}
+
+body.dark-mode .skill-tag.pandas { 
+    background: rgba(255, 235, 59, 0.15); 
+    color: #fff176; 
+    border: 1px solid rgba(255, 241, 118, 0.3);
+}
+
+body.dark-mode .skill-tag.crawling { 
+    background: rgba(233, 30, 99, 0.15); 
+    color: #f06292; 
+    border: 1px solid rgba(240, 98, 146, 0.3);
+}
+
+body.dark-mode .skill-tag.network { 
+    background: rgba(0, 188, 212, 0.15); 
+    color: #4dd0e1; 
+    border: 1px solid rgba(77, 208, 225, 0.3);
+}
+
+body.dark-mode .skill-tag.csharp { 
+    background: rgba(142, 36, 170, 0.15); 
+    color: #ba68c8; 
+    border: 1px solid rgba(186, 104, 200, 0.3);
+}
+
+body.dark-mode .skill-tag.mysql { 
+    background: rgba(63, 81, 181, 0.15); 
+    color: #7986cb; 
+    border: 1px solid rgba(121, 134, 203, 0.3);
+}
+
+body.dark-mode .skill-tag.angular { 
+    background: rgba(244, 67, 54, 0.15); 
+    color: #e57373; 
+    border: 1px solid rgba(229, 115, 115, 0.3);
+}
+
+body.dark-mode .skill-tag.flask { 
+    background: rgba(104, 159, 56, 0.15); 
+    color: #9ccc65; 
+    border: 1px solid rgba(156, 204, 101, 0.3);
+}
+
+body.dark-mode .skill-tag.playwright { 
+    background: rgba(103, 58, 183, 0.15); 
+    color: #b39ddb; 
+    border: 1px solid rgba(179, 157, 219, 0.3);
+}
+
+body.dark-mode .skill-tag.twilio { 
+    background: rgba(233, 30, 99, 0.15); 
+    color: #f48fb1; 
+    border: 1px solid rgba(244, 143, 177, 0.3);
+}
+
+body.dark-mode .skill-tag.asyncio { 
+    background: rgba(33, 150, 243, 0.15); 
+    color: #64b5f6; 
+    border: 1px solid rgba(100, 181, 246, 0.3);
+}
+
+body.dark-mode .skill-tag.docker { 
+    background: rgba(3, 169, 244, 0.15); 
+    color: #4fc3f7; 
+    border: 1px solid rgba(79, 195, 247, 0.3);
+}
+
+body.dark-mode .skill-tag.postgresql { 
+    background: rgba(63, 81, 181, 0.15); 
+    color: #7986cb; 
+    border: 1px solid rgba(121, 134, 203, 0.3);
+}
+
+body.dark-mode .skill-tag.entityframework { 
+    background: rgba(142, 36, 170, 0.15); 
+    color: #ba68c8; 
+    border: 1px solid rgba(186, 104, 200, 0.3);
+}
+
+body.dark-mode .skill-tag.xgboost { 
+    background: rgba(255, 152, 0, 0.15); 
+    color: #ffb74d; 
+    border: 1px solid rgba(255, 183, 77, 0.3);
+}
+
+body.dark-mode .skill-tag.sqlite { 
+    background: rgba(0, 188, 212, 0.15); 
+    color: #4dd0e1; 
+    border: 1px solid rgba(77, 208, 225, 0.3);
+}
+
+/* Dark mode links and buttons */
+body.dark-mode a {
+    color: #0a84ff;
+}
+
+body.dark-mode .resume-button {
+    background: rgba(10, 132, 255, 0.1);
+    color: #0a84ff;
+    border: 1px solid #0a84ff;
+}
+
+body.dark-mode .resume-button:hover {
+    background: rgba(10, 132, 255, 0.2);
+}
+
+/* Dark mode skills section */
+body.dark-mode .skill-group-simple {
+    background: #333333;
+    border: 1px solid #404040;
+}
+
+body.dark-mode .skill-group-simple:hover {
+    background: #3a3a3a;
+    border-color: rgba(10, 132, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skill-group-simple h4 {
+    color: #f5f5f7;
+}
+
+/* Dark mode hobbies section */
+body.dark-mode .hobby-item {
+    background: #333333;
+    border: 1px solid #404040;
+}
+
+body.dark-mode .hobby-item:hover {
+    background: #3a3a3a;
+    border-color: #0a84ff;
+}
+
+body.dark-mode .hobby-item i {
+    color: #0a84ff;
+}
+
+body.dark-mode .hobby-item h4 {
+    color: #f5f5f7;
+}
+
+body.dark-mode .hobby-item p {
+    color: #a1a1a6;
+}
+
+/* Dark mode contact section */
+body.dark-mode #contact .section-card {
+    background: #2d2d2d;
+    border: 1px solid #404040;
+}
+
+body.dark-mode #contact h2 {
+    color: #f5f5f7;
+}
+
+body.dark-mode #contact .section-description {
+    color: #a1a1a6;
+}
+
+/* Dark mode contact cards */
+body.dark-mode .contact-card {
+    background: #333333;
+    border: 1px solid #404040;
+}
+
+body.dark-mode .contact-card:hover {
+    background: #3a3a3a;
+    border-color: #0a84ff;
+}
+
+body.dark-mode .contact-card i {
+    color: #0a84ff;
+}
+
+body.dark-mode .contact-card h4 {
+    color: #f5f5f7;
+}
+
+body.dark-mode .contact-card p {
+    color: #a1a1a6;
+}
+
+/* Dark mode control center */
+body.dark-mode .control-center-dropdown {
+    background: rgba(45, 45, 45, 0.95);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid #404040;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .control-group {
+    background: rgba(51, 51, 51, 0.8);
+    border: 1px solid #404040;
+}
+
+body.dark-mode .control-label {
+    color: #f5f5f7;
+}
+
+body.dark-mode .control-center-item {
+    border-bottom: 1px solid #404040;
+}
+
+body.dark-mode .control-center-item span {
+    color: #f5f5f7;
+}
+
+body.dark-mode .toggle-slider {
+    background-color: #404040;
+}
+
+body.dark-mode .toggle-switch input:checked + .toggle-slider {
+    background-color: #0a84ff;
+}
+
+/* Dark mode scrollbar */
+body.dark-mode .sidebar::-webkit-scrollbar-thumb,
+body.dark-mode .main-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .sidebar::-webkit-scrollbar-thumb:hover,
+body.dark-mode .main-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
    Responsive Design
    ============================================ */
 
