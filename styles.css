@@ -1976,11 +1976,12 @@ p {
         padding: 0 12px;
     }
     
+    /* Hide window title on mobile to prevent overlap */
     .window-title {
-        font-size: 11px;
-        margin-left: 80px;
+        display: none;
     }
     
+    /* Hide profile picture and info on mobile */
     .titlebar-profile {
         display: none;
     }
@@ -2166,9 +2167,9 @@ p {
         padding: 0 8px;
     }
     
+    /* Keep window title hidden on small mobile too */
     .window-title {
-        font-size: 10px;
-        margin-left: 70px;
+        display: none;
     }
     
     .control-center-dropdown {
