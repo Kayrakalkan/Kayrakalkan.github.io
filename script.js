@@ -503,18 +503,18 @@ document.addEventListener('DOMContentLoaded', function() {
             cvModal.classList.add('show');
             cvLoading.style.display = 'flex';
             
-            // Google Docs Viewer URL
+            // Mozilla PDF.js Viewer - daha güvenilir
             const githubRawUrl = 'https://raw.githubusercontent.com/Kayrakalkan/Kayrakalkan.github.io/main/cv.pdf';
-            const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(githubRawUrl)}&embedded=true`;
+            const pdfViewerUrl = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(githubRawUrl)}`;
             
-            cvIframe.src = googleViewerUrl;
+            cvIframe.src = pdfViewerUrl;
             document.body.style.overflow = 'hidden';
             
             // Hide loading after iframe loads
             cvIframe.onload = function() {
                 setTimeout(() => {
                     cvLoading.style.display = 'none';
-                }, 500);
+                }, 1000);
             };
         });
     }
