@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Minimize button - scroll to top
-    if (minimizeBtn) {
+    if (minimizeBtn && mainContent) {
         minimizeBtn.addEventListener('click', function() {
             mainContent.scrollTo({
                 top: 0,
@@ -499,59 +499,62 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // CV Viewer Modal
     // ============================================
-    
+
     const cvModal = document.getElementById('cvModal');
     const openCvModalBtn = document.getElementById('openCvModal');
     const closeCvModalBtn = document.getElementById('closeCvModal');
     const cvIframe = document.getElementById('cvIframe');
     const cvLoading = document.getElementById('cvLoading');
-    
-    // Open CV modal
-    if (openCvModalBtn) {
-        openCvModalBtn.addEventListener('click', function() {
-            cvModal.classList.add('show');
-            cvLoading.style.display = 'flex';
-            
-            // Mozilla PDF.js Viewer - daha güvenilir
-            const githubRawUrl = 'https://raw.githubusercontent.com/Kayrakalkan/Kayrakalkan.github.io/main/cv.pdf';
-            const pdfViewerUrl = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(githubRawUrl)}`;
-            
-            cvIframe.src = pdfViewerUrl;
-            document.body.style.overflow = 'hidden';
-            
-            // Hide loading after iframe loads
-            cvIframe.onload = function() {
-                setTimeout(() => {
-                    cvLoading.style.display = 'none';
-                }, 1000);
-            };
+
+    // Only initialize CV modal if it exists
+    if (cvModal) {
+        // Open CV modal
+        if (openCvModalBtn) {
+            openCvModalBtn.addEventListener('click', function() {
+                cvModal.classList.add('show');
+                cvLoading.style.display = 'flex';
+
+                // Mozilla PDF.js Viewer - daha güvenilir
+                const githubRawUrl = 'https://raw.githubusercontent.com/Kayrakalkan/Kayrakalkan.github.io/main/cv.pdf';
+                const pdfViewerUrl = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(githubRawUrl)}`;
+
+                cvIframe.src = pdfViewerUrl;
+                document.body.style.overflow = 'hidden';
+
+                // Hide loading after iframe loads
+                cvIframe.onload = function() {
+                    setTimeout(() => {
+                        cvLoading.style.display = 'none';
+                    }, 1000);
+                };
+            });
+        }
+
+        // Close CV modal
+        function closeCvModal() {
+            cvModal.classList.remove('show');
+            cvIframe.src = '';
+            cvLoading.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        if (closeCvModalBtn) {
+            closeCvModalBtn.addEventListener('click', closeCvModal);
+        }
+
+        // Close CV modal when clicking outside
+        cvModal.addEventListener('click', function(e) {
+            if (e.target === cvModal) {
+                closeCvModal();
+            }
+        });
+
+        // Close CV modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && cvModal.classList.contains('show')) {
+                closeCvModal();
+            }
         });
     }
-    
-    // Close CV modal
-    function closeCvModal() {
-        cvModal.classList.remove('show');
-        cvIframe.src = '';
-        cvLoading.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-    
-    if (closeCvModalBtn) {
-        closeCvModalBtn.addEventListener('click', closeCvModal);
-    }
-    
-    // Close CV modal when clicking outside
-    cvModal.addEventListener('click', function(e) {
-        if (e.target === cvModal) {
-            closeCvModal();
-        }
-    });
-    
-    // Close CV modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && cvModal.classList.contains('show')) {
-            closeCvModal();
-        }
-    });
     
 });
