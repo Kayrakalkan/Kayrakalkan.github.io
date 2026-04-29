@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="postTitle">Blog Post - Kayra's Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../assets/code.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/code.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "uyf88qroyp");
+    </script>
+</head>
+<body>
+    <!-- macOS Menu Bar (Separate from Window) -->
+    <div class="macos-menubar-top">
+        <div class="menubar-left">
+            <div class="apple-logo">
+                <i class="fab fa-apple"></i>
+            </div>
+        </div>
+        <div class="menubar-right">
+            <div class="menu-icons">
+                <div class="menu-icon" title="WiFi">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <div class="menu-icon" title="Bluetooth">
+                    <i class="fab fa-bluetooth-b"></i>
+                </div>
+                <div class="menu-icon" title="Battery">
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
+                <div class="menu-icon control-center-trigger" title="Control Center">
+                    <i class="fas fa-toggle-on"></i>
+                </div>
+            </div>
+            <div class="menubar-datetime" id="menubarDateTime">
+                <span class="datetime-text">Wed Dec 4  3:45 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Control Center Dropdown -->
+    <div class="control-center-dropdown" id="controlCenterDropdown">
+        <div class="control-center-content">
+            <div class="control-group">
+                <div class="control-item dark-mode-control">
+                    <div class="control-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="control-label">Dark Mode</div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-item airdrop-control">
+                    <div class="control-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="control-label">AirDrop</div>
+                    <button class="airdrop-btn" id="airdropBtn">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- macOS Window Container -->
+    <div class="macos-window">
+        <!-- macOS Window Header (Title Bar with Traffic Lights) -->
+        <div class="titlebar">
+            <div class="traffic-lights">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <div class="window-title">Blog Post</div>
+            <div class="titlebar-profile">
+                <div class="profile-info">
+                    <span class="profile-name">Kayra Kalkan</span>
+                    <span class="profile-role">Tech & Ideas</span>
+                </div>
+                <div class="profile-avatar">
+                    <img src="../photo.jpg" alt="Kayra Kalkan">
+                </div>
+            </div>
+        </div>
+        <div class="window-content">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <nav>
+                    <ul id="nav-links">
+                        <li><a href="../blog.html">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Back to Blog</span>
+                        </a></li>
+                    </ul>
+
+                    <div class="sidebar-divider"></div>
+
+                    <div class="blog-post-meta">
+                        <div class="post-meta-item">
+                            <span class="post-meta-label">Published</span>
+                            <span id="postDateMeta" class="post-meta-value">-</span>
+                        </div>
+                        <div class="post-meta-item">
+                            <span class="post-meta-label">Category</span>
+                            <span id="postCategoryMeta" class="post-meta-value">-</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-divider"></div>
+
+                    <div class="blog-navigation">
+                        <div id="prevPostNav" class="nav-item previous-post" style="display: none;">
+                            <span class="nav-label">Previous</span>
+                            <a href="#" id="prevPostLink" class="nav-link">
+                                <i class="fas fa-chevron-up"></i>
+                                <span id="prevPostTitle">-</span>
+                            </a>
+                        </div>
+                        <div id="nextPostNav" class="nav-item next-post" style="display: none;">
+                            <span class="nav-label">Next</span>
+                            <a href="#" id="nextPostLink" class="nav-link">
+                                <span id="nextPostTitle">-</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-divider"></div>
+
+                    <div class="social-icons">
+                        <a href="https://github.com/Kayrakalkan" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kayra-kalkan/?trk=opento_sprofile_goalscard" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:kalkankayra@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+905456461027" title="Phone">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content blog-post-main-content">
+                <section class="content-section">
+                    <div class="section-card blog-post-card">
+                        <div id="postContent" class="blog-post-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading blog post...</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../blog.js"></script>
+</body>
+</html>

@@ -47,14 +47,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update active navigation on scroll
     function updateActiveNav() {
+        if (!mainContent) return; // Exit if mainContent doesn't exist
+
         let current = '';
         const scrollPosition = mainContent.scrollTop;
         const scrollHeight = mainContent.scrollHeight;
         const clientHeight = mainContent.clientHeight;
-        
+
         // Check if scrolled to bottom (within 50px threshold)
         const isAtBottom = scrollHeight - scrollPosition - clientHeight < 50;
-        
+
         if (isAtBottom) {
             // If at bottom, highlight the last section (Contact)
             current = 'contact';
@@ -62,13 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (scrollPosition >= sectionTop - 100) {
                     current = section.getAttribute('id');
                 }
             });
         }
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -80,32 +82,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll to section
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                // Scroll with proper offset to show section title
-                const offsetTop = targetSection.offsetTop - 150;
-                
-                mainContent.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                
-                // Update active state immediately
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
+            const href = this.getAttribute('href');
+
+            // Check if this is a hash link (same page navigation)
+            if (href && href.startsWith('#') && mainContent) {
+                e.preventDefault();
+
+                const targetId = href;
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    // Scroll with proper offset to show section title
+                    const offsetTop = targetSection.offsetTop - 150;
+
+                    mainContent.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+
+                    // Update active state immediately
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                }
             }
+            // Otherwise, let the link navigate normally (to different pages)
         });
     });
     
     // Listen for scroll events
-    mainContent.addEventListener('scroll', updateActiveNav);
-    
-    // Set initial active state
-    updateActiveNav();
+    if (mainContent) {
+        mainContent.addEventListener('scroll', updateActiveNav);
+        // Set initial active state
+        updateActiveNav();
+    }
     
     
     // ============================================

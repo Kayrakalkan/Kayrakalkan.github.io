@@ -1,0 +1,13 @@
+{
+  "blogs": [
+    {
+      "id": "my-first-blog-post",
+      "title": "I Started a Blog!",
+      "date": "2026-04-28",
+      "category": "Daily Life",
+      "excerpt": "Welcome to my new blog",
+      "content": "<p>Hi guys, I am Kayra. Today I start writing blogs, so welcome to my blog.</p><p>First of all, I would love to start to tell what I am doing here. In this blog website, I am gonna write about my experiences while I explore or learn new things.</p><p>Purpose of the blog, I mean what’s my expectations from that blog, make it permanent and clear when I learn or explore new things. With that, share you what I faced during the project or in the journey.</p><p>But I need to tell you, I am just a student, so please don’t expect too much :)))</p><p>I hope we will have fun together, improve ourselves, and with that learn new stuff. See you as soon as possible.</p><h3>First Code</h3><pre><code>print(\"Hello World\")</code></pre>",   
+      "featured": true
+    }
+  ]
+}
