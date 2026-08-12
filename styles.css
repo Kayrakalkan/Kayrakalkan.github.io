@@ -1370,10 +1370,64 @@ p {
     border: 1px solid #bbdefb;
 }
 
-.skill-tag.postgresql { 
-    background: #e8eaf6; 
-    color: #283593; 
+.skill-tag.postgresql {
+    background: #e8eaf6;
+    color: #283593;
     border: 1px solid #c5cae9;
+}
+
+.skill-tag.react {
+    background: #e6f2ff;
+    color: #0969da;
+    border: 1px solid #bfdcff;
+}
+
+.skill-tag.typescript {
+    background: #eaf2fb;
+    color: #2a5a99;
+    border: 1px solid #c3d9f0;
+}
+
+.skill-tag.tailwind {
+    background: #e6f9ff;
+    color: #0e7490;
+    border: 1px solid #b3ecfb;
+}
+
+.skill-tag.supabase {
+    background: #e6f9f0;
+    color: #157347;
+    border: 1px solid #b8ecd3;
+}
+
+.skill-tag.vercel {
+    background: #f0f0f0;
+    color: #27272a;
+    border: 1px solid #d4d4d8;
+}
+
+.skill-tag.gemini {
+    background: #f3ecfd;
+    color: #6d28d9;
+    border: 1px solid #ddc8f7;
+}
+
+.skill-tag.qdrant {
+    background: #fdecea;
+    color: #b3261e;
+    border: 1px solid #f6c6c2;
+}
+
+.skill-tag.fastapi {
+    background: #e3f6f2;
+    color: #047857;
+    border: 1px solid #bfe8de;
+}
+
+.skill-tag.restapi {
+    background: #eef0fd;
+    color: #4338ca;
+    border: 1px solid #c7ccf7;
 }
 
 .skill-tag.ef { 
@@ -1954,6 +2008,7 @@ p {
 
 .modal-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     margin-top: 24px;
 }
@@ -2456,10 +2511,64 @@ body.dark-mode .skill-tag.teamwork {
     border: 1px solid rgba(77, 182, 172, 0.3);
 }
 
-body.dark-mode .skill-tag.adaptability { 
-    background: rgba(255, 152, 0, 0.15); 
-    color: #ffb74d; 
+body.dark-mode .skill-tag.adaptability {
+    background: rgba(255, 152, 0, 0.15);
+    color: #ffb74d;
     border: 1px solid rgba(255, 183, 77, 0.3);
+}
+
+body.dark-mode .skill-tag.react {
+    background: rgba(9, 105, 218, 0.15);
+    color: #79b8ff;
+    border: 1px solid rgba(121, 184, 255, 0.3);
+}
+
+body.dark-mode .skill-tag.typescript {
+    background: rgba(49, 120, 198, 0.15);
+    color: #7ab0e8;
+    border: 1px solid rgba(122, 176, 232, 0.3);
+}
+
+body.dark-mode .skill-tag.tailwind {
+    background: rgba(56, 189, 248, 0.15);
+    color: #67d4f7;
+    border: 1px solid rgba(103, 212, 247, 0.3);
+}
+
+body.dark-mode .skill-tag.supabase {
+    background: rgba(62, 207, 142, 0.15);
+    color: #6fdba8;
+    border: 1px solid rgba(111, 219, 168, 0.3);
+}
+
+body.dark-mode .skill-tag.vercel {
+    background: rgba(255, 255, 255, 0.12);
+    color: #d4d4d8;
+    border: 1px solid rgba(212, 212, 216, 0.25);
+}
+
+body.dark-mode .skill-tag.gemini {
+    background: rgba(124, 58, 237, 0.15);
+    color: #b794f6;
+    border: 1px solid rgba(183, 148, 246, 0.3);
+}
+
+body.dark-mode .skill-tag.qdrant {
+    background: rgba(179, 38, 30, 0.15);
+    color: #f28b82;
+    border: 1px solid rgba(242, 139, 130, 0.3);
+}
+
+body.dark-mode .skill-tag.fastapi {
+    background: rgba(5, 150, 105, 0.15);
+    color: #6ee7b7;
+    border: 1px solid rgba(110, 231, 183, 0.3);
+}
+
+body.dark-mode .skill-tag.restapi {
+    background: rgba(67, 56, 202, 0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(165, 180, 252, 0.3);
 }
 
 /* Dark mode links and buttons */

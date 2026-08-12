@@ -343,20 +343,24 @@ document.addEventListener('DOMContentLoaded', function() {
             const projectTitle = this.querySelector('h3').textContent;
             const projectDescription = this.querySelector('p').textContent;
             const githubUrl = this.getAttribute('data-github');
-            const techTags = Array.from(this.querySelectorAll('.tech-tag')).map(tag => tag.textContent);
-            
+            const liveUrl = this.getAttribute('data-live');
+            const techTags = Array.from(this.querySelectorAll('.skill-tag')).map(tag => ({
+                text: tag.textContent,
+                className: tag.className
+            }));
+
             // Populate modal
             if (projectModal) {
                 projectModal.querySelector('#modalTitle').textContent = projectTitle;
                 projectModal.querySelector('#modalDescription').textContent = projectDescription;
-                
+
                 // Add tech tags
                 const modalSkills = projectModal.querySelector('#modalSkills');
                 modalSkills.innerHTML = '';
                 techTags.forEach(tech => {
                     const tag = document.createElement('span');
-                    tag.className = 'tech-tag';
-                    tag.textContent = tech;
+                    tag.className = tech.className;
+                    tag.textContent = tech.text;
                     modalSkills.appendChild(tag);
                 });
                 
@@ -367,6 +371,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     githubButton.style.display = 'inline-flex';
                 } else if (githubButton) {
                     githubButton.style.display = 'none';
+                }
+
+                // Set Live Demo link
+                const liveButton = projectModal.querySelector('#modalLiveLink');
+                if (liveUrl && liveButton) {
+                    liveButton.onclick = () => window.open(liveUrl, '_blank');
+                    liveButton.style.display = 'inline-flex';
+                } else if (liveButton) {
+                    liveButton.style.display = 'none';
                 }
                 
                 // Show modal

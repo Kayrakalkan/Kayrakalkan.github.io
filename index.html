@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Kayra Kalkan's portfolio - Statistics student building machine learning, data science, and AI-driven projects. See my work, experience, and skills.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kayrakalkan.github.io/">
+    <meta property="og:title" content="Kayra Kalkan | Portfolio">
+    <meta property="og:description" content="Statistics student building machine learning, data science, and AI-driven projects. See my work, experience, and skills.">
+    <meta property="og:image" content="https://kayrakalkan.github.io/photo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kayra Kalkan | Portfolio">
+    <meta name="twitter:description" content="Statistics student building machine learning, data science, and AI-driven projects. See my work, experience, and skills.">
+    <meta name="twitter:image" content="https://kayrakalkan.github.io/photo.jpg">
     <title>Kayra's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/code.png" type="image/png">  
@@ -174,8 +184,8 @@
                 <section id="overview" class="content-section">
                     <div class="section-card">
                         <h1>Welcome to My Portfolio</h1>
-                        <p>Hi I'm a fourth year Statistics student at Marmara University passionate about data science, machine learning and software development. I specialize in transforming raw data into actionable business insights through statistical analysis, predictive modeling and data visualization. My technical journey began in high school where I started building automation tools and exploring programming languages like Python, Swift and C#. Since then I've developed end to end machine learning pipelines, built AI powered applications and worked on full stack web development projects using modern frameworks.</p>
-                        <p>Currently participating in an ESC volunteering project in Budapest where I'm gaining hands on experience in cross cultural collaboration and international teamwork. I have a strong drive for problem solving and enjoy identifying inefficiencies then building practical solutions to address them. Whether its automating repetitive tasks, creating data driven applications or experimenting with new technologies like NLP and computer vision, I'm constantly looking to expand my skill set and deliver meaningful results.</p>
+                        <p>Hi, I'm a fourth year Statistics student at Marmara University. I like working on data science, machine learning, and software development. I turn raw data into insights people can actually use, through statistics, predictive models, and data visualization. I started building things back in high school, teaching myself Python, Swift, and C#. Since then I've built full machine learning pipelines, AI powered apps, and full stack web projects.</p>
+                        <p>Right now I'm on an ESC volunteering project in Budapest, working with people from different countries and cultures. I like finding problems and building simple, practical solutions for them. Whether it's automating a boring task, building a data driven app, or trying out something new like NLP, I'm always looking to learn more and build things that actually work.</p>
                     </div>
                 </section>
 
@@ -215,9 +225,21 @@
                         <h2>Experience</h2>
                         <p class="section-description">My professional work experience in technology, AI, and Data Science.</p>
                         <div class="experiment-container">
+                            <div class="experiment-box card clickable-card" data-link="https://softtech.com.tr">
+                                <h3><a href="https://softtech.com.tr" target="_blank">Softtech - AI Developer Intern</a></h3>
+                                <p>Built and compared a few ways to recommend books: item-based, user-based, and content-based filtering, plus a plain popularity baseline to check the others against. Content-based filtering (matching books by category, blended with a popularity score) won on the metrics that mattered most, so that's what went into production. Built the full app around it too, with a React frontend and a FastAPI backend. Later added a RAG based chat feature, where Gemini calls real search and wishlist tools to answer book requests in plain language.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag ml">Scikit-learn</span>
+                                    <span class="skill-tag pandas">Pandas</span>
+                                    <span class="skill-tag gemini">Gemini AI</span>
+                                    <span class="skill-tag react">React</span>
+                                </div>
+                                <p class="date">June 2026 - July 2026</p>
+                            </div>
                             <div class="experiment-box card clickable-card" data-link="https://metariom.com/en/home/">
                                 <h3><a href="https://metariom.com/en/home/" target="_blank">Metariom Soft - VR Game Developer</a></h3>
-                                <p>Worked on immersive VR projects using Unreal Engine at an international game development company. Developed interactive virtual reality experiences while collaborating with a multicultural team across different time zones. Gained hands on experience with 3D environment design, physics based interactions and VR optimization techniques. Split time between remote work and office collaboration which strengthened my self management skills and ability to work independently while maintaining clear communication with team members.</p>
+                                <p>Worked on VR projects using Unreal Engine at an international game studio. Built interactive VR experiences with a team spread across different time zones. Worked on 3D environments and physics based interactions, and made sure everything ran smoothly in VR. Split my time between remote work and the office, which taught me how to manage my own schedule and stay in close contact with the team.</p>
                                 <div class="skills">
                                     <span class="skill-tag unrealengine">Unreal Engine</span>
                                     <span class="skill-tag vr">VR</span>
@@ -226,7 +248,7 @@
                             </div>
                             <div class="experiment-box card clickable-card" data-link="https://marungpt.com">
                                 <h3><a href="https://marungpt.com" target="_blank">MarunGPT: AI-Powered University Assistance System</a></h3>
-                                <p>Built an AI driven chatbot system that helps students find answers to university related questions using natural language processing. Implemented keyword extraction pipelines with NLP techniques and integrated Elasticsearch for semantic document retrieval from official university resources. The system processes user queries, retrieves relevant documents and generates contextually accurate responses using OpenAI API. This project deepened my understanding of information retrieval systems, vector search and building production ready AI applications that handle real user traffic.</p>
+                                <p>Built an AI chatbot that helps students find answers to university questions. It uses NLP to pull the key terms out of a question, then uses Elasticsearch to search official university documents for the right ones. The OpenAI API then writes a clear answer based on what it found. The chatbot is live and gets used by real students every day.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag elasticsearch">Elasticsearch</span>
@@ -236,7 +258,7 @@
                             </div>
                             <div class="experiment-box card">
                                 <h3>Cocrm Internship - Data Mining</h3>
-                                <p>Conducted large scale data mining and analysis on datasets containing thousands of records to identify patterns and calculate performance metrics. Worked with Python libraries like Pandas and NumPy for data cleaning, transformation and statistical analysis. Built automated pipelines to extract meaningful business insights from raw data and created reports for stakeholders. This experience strengthened my skills in exploratory data analysis, data preprocessing and working with real world messy datasets.</p>
+                                <p>Analyzed large datasets with thousands of records to find patterns and calculate performance numbers. Used Python, Pandas, and NumPy to clean and process the data. Built automated pipelines that turned raw data into useful business insights, then put together reports for the team. Got a lot of practice cleaning up messy, real world data.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag datascience">Data Analysis</span>
@@ -245,7 +267,7 @@
                             </div>
                             <div class="experiment-box card">
                                 <h3>Shield Games Soft</h3>
-                                <p>Founded and managed my own indie game development studio where I designed, developed and published four mobile games on Google Play and App Store. Handled the entire product lifecycle from concept and design through development testing and deployment. Gained practical experience with game engines including Unity and Unreal Engine along with mobile optimization, user experience design and app store marketing strategies. This entrepreneurial venture taught me project management, deadline handling and iterating based on user feedback.</p>
+                                <p>Started and ran my own small game studio. Designed, built, and published four mobile games on Google Play and the App Store, handling everything from the idea to testing to release. Used Unity and Unreal Engine, and learned about mobile optimization, UX design, and how to market an app. Running the whole thing myself taught me project management, hitting deadlines, and improving games based on user feedback.</p>
                                 <div class="skills">
                                     <span class="skill-tag unrealengine">Unreal Engine</span>
                                     <span class="skill-tag unity">Unity</span>
@@ -259,12 +281,76 @@
                 <section id="projects" class="content-section">
                     <div class="section-card">
                         <h2>Projects</h2>
-                        <p class="section-description">A collection of personal and professional projects showcasing my skills in machine learning, web development, automation and data engineering. Each project represents hands on experience solving real problems with modern technologies.</p>
+                        <p class="section-description">A mix of personal and work projects that show what I can build with machine learning, web development, automation, and data engineering. Each one is something real I built to solve an actual problem.</p>
                         <div class="project-container">
                             <!-- Top Priority Projects -->
+                            <div class="project-box card" data-project="book-recommender" data-github="https://github.com/Kayrakalkan/softtech_internship" data-live="https://softtech-internship.vercel.app">
+                                <h3>Book Recommendation System - Softtech</h3>
+                                <p>Built and tested four ways to recommend books: item-based, user-based, and content-based filtering, plus a plain popularity baseline to sanity check the others. Compared them on precision, recall, RMSE and MAE across thousands of users. Content-based filtering (matching books by category, blended with a popularity score) won on the metrics that mattered most for personalized discovery, so that's the one that shipped. Also built a RAG based chat feature on top: Gemini reads what a user asks for in plain language and calls real tools to search the catalog and add books to their wishlist. Full app built with a React frontend and a FastAPI backend.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag ml">Scikit-learn</span>
+                                    <span class="skill-tag pandas">Pandas</span>
+                                    <span class="skill-tag gemini">Gemini AI</span>
+                                    <span class="skill-tag react">React</span>
+                                </div>
+                                <p class="date">June 2026 - July 2026</p>
+                            </div>
+
+                            <div class="project-box card" data-project="simulationrobot" data-github="https://github.com/Kayrakalkan/robot_simulation">
+                                <h3>Robot Navigation Simulator (SLAM)</h3>
+                                <p>Built a robot navigation simulator from scratch to learn SLAM and path planning by actually building them. A simulated robot uses ray cast LIDAR to scan a room it doesn't know yet, builds an occupancy grid map from what it finds, and picks where to explore next using frontier based exploration. Once the room is mapped, it can save the map, reload it later, and navigate straight to any point I click using A* path planning with path smoothing. Built the simulation in Python with Pygame, plus a FastAPI web server and an Angular dashboard to watch it from the browser. Covered with a real pytest test suite across the planning, mapping, and sensor code.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag numpy">NumPy</span>
+                                    <span class="skill-tag fastapi">FastAPI</span>
+                                    <span class="skill-tag angular">Angular</span>
+                                </div>
+                                <p class="date">July 2026</p>
+                            </div>
+
+                            <div class="project-box card" data-project="worldcup-ai" data-github="https://github.com/Kayrakalkan/worldcup_ai_predictions">
+                                <h3>World Cup AI Match Analysis</h3>
+                                <p>Built a web app that gives AI generated match previews and score predictions for World Cup games. Match schedules come in automatically from a sports API, then Google Gemini searches the web for team form, injuries, and head to head stats to write a full match analysis. Results are saved in Supabase so the site loads instantly for visitors, with no live API calls needed. Built to run on free hosting only, so the AI analysis runs one match at a time to stay inside Vercel's serverless limits.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag flask">Flask</span>
+                                    <span class="skill-tag gemini">Gemini AI</span>
+                                    <span class="skill-tag supabase">Supabase</span>
+                                    <span class="skill-tag vercel">Vercel</span>
+                                </div>
+                                <p class="date">June 2026</p>
+                            </div>
+
+                            <div class="project-box card" data-project="wekisstennis" data-github="https://github.com/Kayrakalkan/wekisstennis" data-live="https://wekisstennis.vercel.app">
+                                <h3>WeKissTennis - Tennis Prediction App</h3>
+                                <p>Built a room based prediction game for Wimbledon. Users create or join a room with friends, predict match winners and exact set scores, and make a pre tournament top 5 "podium" pick. Scores update automatically through a scheduled job that checks live results and updates the leaderboard, both inside each room and on a global top 10. Built with React and Supabase, with English and Turkish language support.</p>
+                                <div class="skills">
+                                    <span class="skill-tag react">React</span>
+                                    <span class="skill-tag typescript">TypeScript</span>
+                                    <span class="skill-tag tailwind">Tailwind</span>
+                                    <span class="skill-tag supabase">Supabase</span>
+                                    <span class="skill-tag vercel">Vercel</span>
+                                </div>
+                                <p class="date">June 2026 - Present</p>
+                            </div>
+
+                            <div class="project-box card" data-project="clothesfinder" data-github="https://github.com/Kayrakalkan">
+                                <h3>Clothes Finder - AI Fashion Search</h3>
+                                <p>Built an AI powered search engine for clothes. Instead of filters, users type what they want in plain Turkish or English, like "short white basic t-shirt, not oversized." Gemini reads the request and turns it into structured filters, then a vector database (Qdrant) matches it against text and image embeddings of real scraped Zara products. A ranking system scores each result on fit, style, and similarity, and Gemini writes a short "why this fits you" note for each one. Built the scraper, the data pipeline, and the FastAPI search backend myself.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag fastapi">FastAPI</span>
+                                    <span class="skill-tag gemini">Gemini AI</span>
+                                    <span class="skill-tag qdrant">Qdrant</span>
+                                    <span class="skill-tag postgresql">PostgreSQL</span>
+                                </div>
+                                <p class="date">June 2026 - July 2026</p>
+                            </div>
+
                             <div class="project-box card" data-project="tennis-prediction" data-github="https://github.com/Kayrakalkan/ml_tennis_matchs_predict">
                                 <h3>Tennis Match Prediction ML</h3>
-                                <p>Built an end to end machine learning pipeline for predicting ATP tennis match outcomes using historical match data. Engineered domain specific features including Elo ratings, head to head statistics, surface specialization scores and recent form metrics. Implemented and compared multiple classification algorithms like Logistic Regression, Random Forest and XGBoost. The final model achieved 72.9% prediction accuracy demonstrating that well crafted feature engineering often outperforms complex model architectures. Used Pandas for data manipulation and Scikit learn for model training and evaluation.</p>
+                                <p>Built a machine learning pipeline that predicts ATP tennis match results using historical match data. Created features like Elo ratings, head to head stats, surface specialization, and recent form. Tried a few models, including Logistic Regression, Random Forest, and XGBoost, and compared the results. The final model hit 72.9% accuracy, which showed that good feature engineering can matter more than a fancy model. Used Pandas for the data work and Scikit-learn to train and test the models.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag pandas">Pandas</span>
@@ -276,7 +362,7 @@
                             
                             <div class="project-box card" data-project="flights-tracker" data-github="https://github.com/Kayrakalkan">
                                 <h3>Flights Vacation Tracker — AI-Based</h3>
-                                <p>Developed a Python automation tool that scrapes flight booking platforms to find optimal travel routes between two origin countries across flexible date ranges. The system compares fares from multiple departure points to fixed or dynamic destinations. Integrated an AI powered itinerary engine using OpenAI API that generates multi city trip suggestions for 3 to 5 day vacations and ranks options by total cost. Built with Playwright for browser automation, Pandas for data processing and SQLite for storing scraped results. Currently running continuous tests for personal travel planning use cases.</p>
+                                <p>Built a Python tool that scrapes flight booking sites to find the best travel routes between two countries, checking a flexible range of dates. It compares prices from different departure cities to one or more destinations. Also added an AI itinerary generator with the OpenAI API that suggests 3 to 5 day multi city trips and ranks them by total cost. Built with Playwright for the browser automation, Pandas for the data, and SQLite to store results. Still testing it out for my own trip planning.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag playwright">Playwright</span>
@@ -289,7 +375,7 @@
                             
                             <div class="project-box card" data-project="cocrm" data-github="https://github.com/Kayrakalkan">
                                 <h3>CoCrm Data Mining Project</h3>
-                                <p>Built a web scraping pipeline to extract contact information from 25000 company websites including emails and phone numbers. Implemented proxy rotation and request throttling to handle large scale data collection reliably. Used BeautifulSoup and custom crawlers to parse diverse HTML structures and extract structured data. Processed and cleaned the collected data using Pandas and NumPy then exported results for CRM integration. This project taught me about handling edge cases in web scraping, working with messy real world data and building robust data pipelines.</p>
+                                <p>Built a web scraping pipeline that pulled contact info like emails and phone numbers from 25,000 company websites. Used proxy rotation and request throttling so the large scale scraping stayed reliable. Used BeautifulSoup and custom crawlers to handle all the different HTML layouts. Cleaned and processed everything with Pandas and NumPy, then exported it for CRM use. Learned a lot about handling messy real world data and edge cases in web scraping.</p>
                                 <div class="skills">
                                     <span class="skill-tag crawling">Crawling</span>
                                     <span class="skill-tag numpy">Numpy</span>
@@ -300,7 +386,7 @@
                             
                             <div class="project-box card" data-project="ai-lyrics" data-github="https://github.com/Kayrakalkan">
                                 <h3>AI-based Fine-Tuning Song Lyrics Translation</h3>
-                                <p>Fine tuned language models to provide contextually accurate translations of song lyrics while preserving emotional meaning and cultural nuances. Created training datasets from human translated lyrics pairs and used them to improve model output quality. Built a search interface where users can look up any song and receive AI generated translations that capture the original sentiment. Gained practical experience in data preparation, text preprocessing, model fine tuning and evaluating translation quality metrics.</p>
+                                <p>Fine tuned a language model to translate song lyrics while keeping the emotional meaning and cultural feel intact. Built training data from real human translated lyrics and used it to improve the model's output. Also built a simple search interface where you can look up a song and get an AI translation that still feels right. Learned a lot about preparing data, fine tuning models, and checking translation quality.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag ml">Machine Learning</span>
@@ -311,7 +397,7 @@
                             <!-- Additional Projects -->
                             <div class="project-box card" data-project="sportcenter" data-github="https://github.com/Kayrakalkan/sportcenter_reservaiton_webapp">
                                 <h3>Sport Center Reservation WebApp</h3>
-                                <p>Developed a full stack web application for managing university sports facility bookings. Faculty members can reserve weekly training slots through an interactive calendar interface while administrators have full control over scheduling and user management. Implemented role based access control with different permission levels for users and admins. Built the frontend with Angular 19 featuring real time availability checking and responsive design. Backend built with ASP.NET Core 9 Web API and Entity Framework for database operations. Includes conflict prevention logic and one hour slot booking rules.</p>
+                                <p>Built a full stack web app for booking university sports facilities. Faculty can reserve weekly training slots through a calendar, and admins can manage the whole schedule and user list. Added role based access so users and admins see different permissions. Frontend is Angular 19 with real time slot checking and a responsive layout. Backend is ASP.NET Core 9 Web API with Entity Framework. Also handles conflict prevention and one hour booking rules.</p>
                                 <div class="skills">
                                     <span class="skill-tag angular">Angular 19</span>
                                     <span class="skill-tag dotnet">ASP.NET Core 9</span>
@@ -323,7 +409,7 @@
                             
                             <div class="project-box card" data-project="vacation-countdown" data-github="https://github.com/Kayrakalkan/vacation-countdown">
                                 <h3>Vacation Countdown & Planner App</h3>
-                                <p>Created a lightweight web app for tracking upcoming vacation dates with automatic daily reminders via SMS or WhatsApp. Users can add and edit vacation entries, attach notes and view all planned trips in one place. Backend built with Flask handling REST API endpoints and SQLite for data persistence. Integrated Twilio API for sending scheduled notification messages. The app features a mobile friendly interface designed for quick personal planning and countdown tracking.</p>
+                                <p>Made a simple web app for tracking upcoming vacations, with daily reminders sent by SMS or WhatsApp. Users can add and edit trips, add notes, and see everything in one place. Backend is Flask with a REST API and SQLite for storage. Used the Twilio API to send the scheduled reminders. Mobile friendly, built for quick personal trip planning.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag flask">Flask</span>
@@ -335,7 +421,7 @@
                             
                             <div class="project-box card" data-project="visa-checker" data-github="https://github.com/Kayrakalkan/visa_application">
                                 <h3>Visa Appointment Checker</h3>
-                                <p>Built a Python automation tool that monitors visa appointment availability on embassy websites and sends real time SMS alerts when slots open up. Uses Playwright for headless browser automation to navigate appointment pages and check availability at configurable intervals. Implemented error handling, automatic retries and session management for reliable long running operation. Integrated Twilio for instant SMS notifications when appointments become available. Developed for educational purposes to explore web automation and async programming patterns with AsyncIO.</p>
+                                <p>Built a Python tool that checks visa appointment slots on embassy websites and sends an SMS the moment one opens up. Uses Playwright to check availability at set intervals. Added error handling, retries, and session management so it can run reliably for a long time. Twilio sends the SMS alerts. Built mainly to learn web automation and async programming with AsyncIO.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag playwright">Playwright</span>
@@ -347,7 +433,7 @@
                             
                             <div class="project-box card" data-project="tesla-monitor" data-github="https://github.com/Kayrakalkan/tesla_bot">
                                 <h3>Tesla Stock Monitor Bot</h3>
-                                <p>Created an automated monitoring bot that tracks vehicle inventory on the Tesla Turkey website and sends SMS alerts when specific models become available. Uses Playwright to automate browser interactions and handle dynamic page elements including modal dialogs. Containerized with Docker for easy deployment and configured to run on scheduled intervals via cron jobs. Integrated Twilio API for instant mobile notifications. The project demonstrates practical automation skills and real time monitoring system design.</p>
+                                <p>Built a bot that tracks Tesla Turkey's vehicle inventory and sends an SMS when a specific model becomes available. Uses Playwright to handle the site's dynamic pages and pop ups. Put it in Docker and ran it on a schedule with cron jobs. Twilio handles the SMS alerts. A good hands on project for automation and real time monitoring.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag playwright">Playwright</span>
@@ -357,18 +443,9 @@
                                 <p class="date">May 2025</p>
                             </div>
                             
-                            <div class="project-box card" data-project="instafinder" data-github="https://github.com/Kayrakalkan">
-                                <h3>Instafinder</h3>
-                                <p>Developed a facial recognition system that analyzes profile pictures across social media accounts to find potential matches. The system takes a target image and a list of account URLs as input then uses computer vision libraries to extract facial embeddings and calculate similarity scores. Gained hands on experience with image processing pipelines, face detection algorithms, feature vector comparisons and working with AI models for biometric analysis. Built for educational and experimental purposes exploring the capabilities of facial recognition technology. Not publicly available.</p>
-                                <div class="skills">
-                                    <span class="skill-tag python">Python</span>
-                                    <span class="skill-tag ai">AI</span>
-                                </div>
-                                <p class="date">November 2024</p>
-                            </div>
                             <div class="project-box card" data-project="zara" data-github="https://github.com/Kayrakalkan">
                                 <h3>Zara Stock App</h3>
-                                <p>Built an automation tool that monitors Zara product availability and automatically adds items to cart when they come back in stock. Uses session cookies for authentication and continuously checks stock levels for products in a personalized watchlist. Implemented email notification system to alert users when items are successfully added to their cart. The project involved working with HTTP requests, cookie management, web scraping and building automated workflows that save time on repetitive tasks.</p>
+                                <p>Built a tool that watches Zara product pages and adds an item to your cart automatically once it's back in stock. Uses session cookies to stay logged in and keeps checking stock for items on a personal watchlist. Sends an email once something gets added to the cart. Good practice with HTTP requests, cookies, scraping, and building automation that saves real time.</p>
                                 <div class="skills">
                                     <span class="skill-tag python">Python</span>
                                     <span class="skill-tag crawling">Crawling</span>
@@ -377,7 +454,7 @@
                             </div>
                             <div class="project-box card" data-project="travel-app" data-github="https://github.com/Kayrakalkan">
                                 <h3>Swift Travel App</h3>
-                                <p>Developed a mobile application for iOS where users can share travel experiences and discover new destinations. Features include uploading visited locations with photos, writing reviews and marking places on an interactive map. Built with Swift and integrated Firebase for user authentication, real time database and cloud storage. This was my first mobile development project which taught me iOS development fundamentals, user interface design principles and working with location based services and map APIs.</p>
+                                <p>Built an iOS app where users can share travel experiences and find new places to visit. You can upload photos of places you've been, write reviews, and mark them on an interactive map. Built with Swift and Firebase for login, the database, and file storage. My first mobile app project, and it taught me the basics of iOS development, UI design, and working with maps and location APIs.</p>
                                 <div class="skills">
                                     <span class="skill-tag swift">Swift</span>
                                     <span class="skill-tag firebase">Firebase</span>
@@ -386,7 +463,7 @@
                             </div>
                             <div class="project-box card" data-project="tennis-app" data-github="https://github.com/Kayrakalkan">
                                 <h3>Apple Watch Tennis Counter App</h3>
-                                <p>Built a watchOS application for tennis players to track match scores directly from their wrist. Users can log games, sets and individual points with simple taps making it easy to keep score during active play. Developed with Swift using WatchKit framework and optimized for the small screen interface of Apple Watch. This project introduced me to wearable app development and designing intuitive user experiences for constrained device form factors.</p>
+                                <p>Built a watchOS app for tennis players to keep score right from their wrist. You can log games, sets, and points with a simple tap while playing. Built with Swift and WatchKit, designed for the small Apple Watch screen. My first time building for a wearable, and it taught me how to design simple UI for a tiny screen.</p>
                                 <div class="skills">
                                     <span class="skill-tag swift">Swift</span>
                                 </div>
@@ -394,7 +471,7 @@
                             </div>
                             <div class="project-box card" data-project="fullstack" data-github="https://github.com/Kayrakalkan">
                                 <h3>Business Website - Full Stack</h3>
-                                <p>Developed a company management system with inventory tracking, product CRUD operations and role based user permissions. Backend built with C# ASP.NET handling REST API endpoints with MySQL database for data storage. Implemented different dashboard views for sales, admin and regular users with appropriate access controls. Frontend developed using Angular with responsive design and modern UI components. APIs tested and documented using Postman. This project gave me comprehensive full stack experience covering database design, API development and frontend backend integration.</p>
+                                <p>Built a company management system with inventory tracking, product CRUD, and role based permissions. Backend is C# ASP.NET with a REST API and MySQL database. Built separate dashboards for sales, admin, and regular users, each with the right access level. Frontend is Angular with a responsive layout. Tested and documented the APIs with Postman. A solid full stack project covering database design, API work, and connecting frontend to backend.</p>
                                 <div class="skills">
                                     <span class="skill-tag csharp">C#</span>
                                     <span class="skill-tag mysql">MySQL</span>
@@ -402,9 +479,18 @@
                                 </div>
                                 <p class="date">April 2020</p>
                             </div>
+                            <div class="project-box card" data-project="fefstats" data-github="https://github.com/Kayrakalkan/fefstats" data-live="https://fefstats.vercel.app">
+                                <h3>FEF Stats - Basketball Analytics Dashboard</h3>
+                                <p>Built a stats dashboard for my faculty basketball team. Pulls game and season data from the league's API through a GraphQL client, then computes advanced stats the official app doesn't show, like True Shooting % and Effective FG%. An admin panel lets the team refresh the data with one tap. Runs on Vercel with Python serverless functions, and has a real pytest test suite behind it.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag vercel">Vercel</span>
+                                </div>
+                                <p class="date">Ongoing — 2026</p>
+                            </div>
                             <div class="project-box card" data-project="games" data-github="https://github.com/Kayrakalkan">
                                 <h3>Game Projects</h3>
-                                <p>Designed and developed multiple mobile games during high school using Unity and Unreal Engine publishing them on Google Play and App Store. Managed the complete development lifecycle from game design and asset creation through testing and app store submission. Learned about production vs testing environments, app store optimization and mobile game marketing. These projects developed my self learning abilities as I tackled new technical challenges independently and built a foundation for creative problem solving.</p>
+                                <p>Designed and built several mobile games in high school using Unity and Unreal Engine, and published them on Google Play and the App Store. Handled the whole process myself: game design, assets, testing, and store submission. Learned about production vs testing builds, app store optimization, and basic mobile marketing. These projects taught me how to learn new things on my own and solve problems creatively.</p>
                                 <div class="skills">
                                     <span class="skill-tag unrealengine">Unreal Engine</span>
                                     <span class="skill-tag unity">Unity</span>
@@ -675,6 +761,10 @@
                 <p id="modalDescription"></p>
                 <div id="modalSkills" class="modal-tech-tags"></div>
                 <div class="modal-actions">
+                    <button class="modal-btn primary" id="modalLiveLink">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                        Live Demo
+                    </button>
                     <button class="modal-btn github-btn" id="modalGithubLink">
                         <i class="fab fa-github"></i>
                         View on GitHub
