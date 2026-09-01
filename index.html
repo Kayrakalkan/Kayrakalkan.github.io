@@ -297,6 +297,54 @@
                                 <p class="date">June 2026 - July 2026</p>
                             </div>
 
+                            <div class="project-box card" data-project="tennis-prediction" data-github="https://github.com/Kayrakalkan/ml_tennis_matchs_predict">
+                                <h3>Tennis Match Prediction ML</h3>
+                                <p>Built a machine learning pipeline that predicts ATP tennis match results using historical match data. Created features like Elo ratings, head to head stats, surface specialization, and recent form. Tried a few models, including Logistic Regression, Random Forest, and XGBoost, and compared the results. The final model hit 72.9% accuracy, which showed that good feature engineering can matter more than a fancy model. Used Pandas for the data work and Scikit-learn to train and test the models.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag pandas">Pandas</span>
+                                    <span class="skill-tag ml">Scikit-learn</span>
+                                    <span class="skill-tag xgboost">XGBoost</span>
+                                </div>
+                                <p class="date">August 2025</p>
+                            </div>
+
+                            <div class="project-box card" data-project="clothesfinder" data-github="https://github.com/Kayrakalkan">
+                                <h3>Clothes Finder - AI Fashion Search</h3>
+                                <p>Built an AI powered search engine for clothes. Instead of filters, users type what they want in plain Turkish or English, like "short white basic t-shirt, not oversized." Gemini reads the request and turns it into structured filters, then a vector database (Qdrant) matches it against text and image embeddings of real scraped Zara products. A ranking system scores each result on fit, style, and similarity, and Gemini writes a short "why this fits you" note for each one. Built the scraper, the data pipeline, and the FastAPI search backend myself.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag fastapi">FastAPI</span>
+                                    <span class="skill-tag gemini">Gemini AI</span>
+                                    <span class="skill-tag qdrant">Qdrant</span>
+                                    <span class="skill-tag postgresql">PostgreSQL</span>
+                                </div>
+                                <p class="date">June 2026 - July 2026</p>
+                            </div>
+
+                            <div class="project-box card" data-project="ai-lyrics" data-github="https://github.com/Kayrakalkan">
+                                <h3>AI-based Fine-Tuning Song Lyrics Translation</h3>
+                                <p>Fine tuned a language model to translate song lyrics while keeping the emotional meaning and cultural feel intact. Built training data from real human translated lyrics and used it to improve the model's output. Also built a simple search interface where you can look up a song and get an AI translation that still feels right. Learned a lot about preparing data, fine tuning models, and checking translation quality.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag ml">Machine Learning</span>
+                                </div>
+                                <p class="date">April 2024</p>
+                            </div>
+
+                            <div class="project-box card" data-project="rkt-chatbot" data-github="https://github.com/Kayrakalkan/llm-agent-memory-rag-roketsan">
+                                <h3>RKT ChatBot - Agentic RAG Assistant</h3>
+                                <p>Built an agentic chatbot during a Gemini LLM workshop with Roketsan. It doesn't just search one document, it decides on its own whether a question needs the technical manual or a general answer, then picks the right tool for it. Uses FAISS for vector search over a military standard document and LangGraph to remember the conversation. Also built a full web UI with login, per-user usage limits, and a document viewer, then deployed it.</p>
+                                <div class="skills">
+                                    <span class="skill-tag python">Python</span>
+                                    <span class="skill-tag gemini">Gemini AI</span>
+                                    <span class="skill-tag langchain">LangChain</span>
+                                    <span class="skill-tag faiss">FAISS</span>
+                                    <span class="skill-tag fastapi">FastAPI</span>
+                                </div>
+                                <p class="date">August 2026</p>
+                            </div>
+
                             <div class="project-box card" data-project="simulationrobot" data-github="https://github.com/Kayrakalkan/robot_simulation">
                                 <h3>Robot Navigation Simulator (SLAM)</h3>
                                 <p>Built a robot navigation simulator from scratch to learn SLAM and path planning by actually building them. A simulated robot uses ray cast LIDAR to scan a room it doesn't know yet, builds an occupancy grid map from what it finds, and picks where to explore next using frontier based exploration. Once the room is mapped, it can save the map, reload it later, and navigate straight to any point I click using A* path planning with path smoothing. Built the simulation in Python with Pygame, plus a FastAPI web server and an Angular dashboard to watch it from the browser. Covered with a real pytest test suite across the planning, mapping, and sensor code.</p>
@@ -335,31 +383,6 @@
                                 <p class="date">June 2026 - Present</p>
                             </div>
 
-                            <div class="project-box card" data-project="clothesfinder" data-github="https://github.com/Kayrakalkan">
-                                <h3>Clothes Finder - AI Fashion Search</h3>
-                                <p>Built an AI powered search engine for clothes. Instead of filters, users type what they want in plain Turkish or English, like "short white basic t-shirt, not oversized." Gemini reads the request and turns it into structured filters, then a vector database (Qdrant) matches it against text and image embeddings of real scraped Zara products. A ranking system scores each result on fit, style, and similarity, and Gemini writes a short "why this fits you" note for each one. Built the scraper, the data pipeline, and the FastAPI search backend myself.</p>
-                                <div class="skills">
-                                    <span class="skill-tag python">Python</span>
-                                    <span class="skill-tag fastapi">FastAPI</span>
-                                    <span class="skill-tag gemini">Gemini AI</span>
-                                    <span class="skill-tag qdrant">Qdrant</span>
-                                    <span class="skill-tag postgresql">PostgreSQL</span>
-                                </div>
-                                <p class="date">June 2026 - July 2026</p>
-                            </div>
-
-                            <div class="project-box card" data-project="tennis-prediction" data-github="https://github.com/Kayrakalkan/ml_tennis_matchs_predict">
-                                <h3>Tennis Match Prediction ML</h3>
-                                <p>Built a machine learning pipeline that predicts ATP tennis match results using historical match data. Created features like Elo ratings, head to head stats, surface specialization, and recent form. Tried a few models, including Logistic Regression, Random Forest, and XGBoost, and compared the results. The final model hit 72.9% accuracy, which showed that good feature engineering can matter more than a fancy model. Used Pandas for the data work and Scikit-learn to train and test the models.</p>
-                                <div class="skills">
-                                    <span class="skill-tag python">Python</span>
-                                    <span class="skill-tag pandas">Pandas</span>
-                                    <span class="skill-tag ml">Scikit-learn</span>
-                                    <span class="skill-tag xgboost">XGBoost</span>
-                                </div>
-                                <p class="date">August 2025</p>
-                            </div>
-                            
                             <div class="project-box card" data-project="flights-tracker" data-github="https://github.com/Kayrakalkan">
                                 <h3>Flights Vacation Tracker — AI-Based</h3>
                                 <p>Built a Python tool that scrapes flight booking sites to find the best travel routes between two countries, checking a flexible range of dates. It compares prices from different departure cities to one or more destinations. Also added an AI itinerary generator with the OpenAI API that suggests 3 to 5 day multi city trips and ranks them by total cost. Built with Playwright for the browser automation, Pandas for the data, and SQLite to store results. Still testing it out for my own trip planning.</p>
@@ -372,7 +395,7 @@
                                 </div>
                                 <p class="date">Ongoing tests — 2025</p>
                             </div>
-                            
+
                             <div class="project-box card" data-project="cocrm" data-github="https://github.com/Kayrakalkan">
                                 <h3>CoCrm Data Mining Project</h3>
                                 <p>Built a web scraping pipeline that pulled contact info like emails and phone numbers from 25,000 company websites. Used proxy rotation and request throttling so the large scale scraping stayed reliable. Used BeautifulSoup and custom crawlers to handle all the different HTML layouts. Cleaned and processed everything with Pandas and NumPy, then exported it for CRM use. Learned a lot about handling messy real world data and edge cases in web scraping.</p>
@@ -383,17 +406,7 @@
                                 </div>
                                 <p class="date">September 2024</p>
                             </div>
-                            
-                            <div class="project-box card" data-project="ai-lyrics" data-github="https://github.com/Kayrakalkan">
-                                <h3>AI-based Fine-Tuning Song Lyrics Translation</h3>
-                                <p>Fine tuned a language model to translate song lyrics while keeping the emotional meaning and cultural feel intact. Built training data from real human translated lyrics and used it to improve the model's output. Also built a simple search interface where you can look up a song and get an AI translation that still feels right. Learned a lot about preparing data, fine tuning models, and checking translation quality.</p>
-                                <div class="skills">
-                                    <span class="skill-tag python">Python</span>
-                                    <span class="skill-tag ml">Machine Learning</span>
-                                </div>
-                                <p class="date">April 2024</p>
-                            </div>
-                            
+
                             <!-- Additional Projects -->
                             <div class="project-box card" data-project="sportcenter" data-github="https://github.com/Kayrakalkan/sportcenter_reservaiton_webapp">
                                 <h3>Sport Center Reservation WebApp</h3>
